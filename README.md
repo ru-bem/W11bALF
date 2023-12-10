@@ -1,9 +1,6 @@
 ## W11-bALF - Windows 11 but _a little_ faster
 
-Two modified scripts just for personal use:
-- **DisableSomeServices.bat** - Change some rarely used services to manual and disable services that aren't used for nothing anymore.
-- **DisableSomeTelemetry.bat** - Disable telemetry in a safe way, so everything in windows 11 keeps working normally.
-
----
-
-###### Credits for the original script: https://github.com/SanGraphic/QuickBoost
+Dois scripts modificados para uso pessoal:
+- **DisableSomeServices.bat** - Muda alguns serviços raramente usados para manual e desativa serviços que não são mais usados pelo Windows em 2023.
+- **DisableSomeTelemetry.bat** - Desabilita a Telemetria de uma maneira segura e não-destrutiva.
+- **W11bALF - AIO v0.1.bat** - Versão alpha da versão All-in-one do script.
