@@ -1,7 +1,7 @@
 @echo off
 
 :: Variáveis
-set w11balfver=v0.5
+set w11balfver=v0.2
 set cor=
 set grn=[92m 
 set bgrn=[42m
