@@ -1,6 +1,8 @@
 ## W11bALF - Windows 11 but _a little_ faster
 ![w11balf](https://github.com/rubem-psd/W11bALF/assets/60861729/b926ab71-871c-45bf-b90b-c5eec6579cd7)
 
+Baixe a versão mais recente em: https://github.com/rubem-psd/W11bALF/releases/latest
+
 ### O que o W11bALF faz?
 - ✅ Desativa servicos não usados pelo Windows e altera outros para o modo manual.
 - ✅ Desativa a telemetria do Windows de maneira não-invasiva.
