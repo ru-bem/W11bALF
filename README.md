@@ -1,3 +1,4 @@
+# W11bALF
 O **Windows 11 but A Little Faster** é um pequeno programa escrito em [**Batch**](https://en.wikipedia.org/wiki/Batch_file) que foi criado com o objetivo de facilitar o processo de configuração pós-instalação do Windows 11, mas também pode ser usado para fazer limpezas periódicas no sistema e realizar alguns ajustes afim de fazer com que o sistema permaneça o mais otimizado possível.
 
 ![W11bALF_v1 0 0_main](https://github.com/rubem-psd/W11bALF/assets/60861729/7fa114f2-9f72-4392-a82a-8294a525e9fd)
@@ -5,7 +6,6 @@ O **Windows 11 but A Little Faster** é um pequeno programa escrito em [**Batch*
 ---
 
 # O que o W11bALF pode fazer?
-
 **Atualmente, o programa se encontra na versão [v1.0.0](https://github.com/rubem-psd/W11bALF/releases/latest) e é capaz de automatizar os seguintes processos:**
 
 - **[Serviços]** Alterar o modo de inicialização de alguns serviços do windows.
@@ -60,8 +60,8 @@ A limpeza profunda pode ser ativada alterando o valor de “deepclean” na linh
 • Todas as alterações feitas foram pensadas para o público geral e não para um nicho específico de usuários, por tanto, NENHUM recurso do windows deixará de funcionar após o uso do programa, além disso, não espere por modificações agressivas no sistema.
 
 • Alguns recursos são recomendados apenas para novas instalações do Windows ou para ocasiões específicas, são eles a configuração do Microsoft Edge e a desfixação dos ícones do menu iniciar e da barra de tarefas.
-Motivo 1 - Se você já usa o Edge há algum tempo e já tiver personalizado e alterado várias configurações, é possível que essa função configure o navegador de forma diferente da que você já costuma usar.
-Motivo 2 - Se o Windows já estiver instalado há algum tempo, você provavelmente já personalizou o menu iniciar e a barra de tarefas. Usar essa função vai desfixar todos os ícones tanto do menu iniciar quanto da barra de tarefas, o que apenas atrapalhará você nesse caso.
+- Motivo 1 - Se você já usa o Edge há algum tempo e já tiver personalizado e alterado várias configurações, é possível que essa função configure o navegador de forma diferente da que você já costuma usar.
+- Motivo 2 - Se o Windows já estiver instalado há algum tempo, você provavelmente já personalizou o menu iniciar e a barra de tarefas. Usar essa função vai desfixar todos os ícones tanto do menu iniciar quanto da barra de tarefas, o que apenas atrapalhará você nesse caso.
 
 ---
 
