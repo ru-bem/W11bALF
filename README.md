@@ -80,4 +80,7 @@ A limpeza profunda pode ser ativada alterando o valor de “deepclean” na linh
 
 ---
 
+Para relatar bugs, enviar sugestões ou fazer perguntas use a aba [issues](https://github.com/rubem-psd/W11bALF/issues) na página principal. Por favor, use a label correspondente ao tipo de mensagem.
+
+---
 ##### W11bALF - Windows 11 but A Little Faster - v1.0.0⠀⠀⠀|||⠀⠀⠀Criado com ❤️ por Rubem Júnior⠀⠀⠀|||⠀⠀⠀2024
