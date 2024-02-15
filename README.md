@@ -48,6 +48,17 @@ A limpeza profunda pode ser ativada alterando o valor de “deepclean” na linh
 
 - `deepclean=0` - Valor padrão. A função de limpeza do sistema procurará por arquivos de determinadas extensões apenas na pasta C:\Windows.
 - `deepclean=1` - A função de limpeza do sistema procurará por arquivos de determinadas extensões em **toda a unidade** onde o Windows está instalado.
+---
+
+# Mais informações
+- [Lista de serviços alterados](https://github.com/rubem-psd/W11bALF/blob/main/Recursos/Mais_Informa%C3%A7%C3%B5es/Lista_de_servi%C3%A7os_alterados.md)
+- [Lista de tarefas de telemetria alteradas](https://github.com/rubem-psd/W11bALF/blob/main/Recursos/Mais_Informa%C3%A7%C3%B5es/Lista_de_tarefas_de_telemetria_alteradas.md)
+- [Lista de programas desinstalados](https://github.com/rubem-psd/W11bALF/blob/main/Recursos/Mais_Informa%C3%A7%C3%B5es/Lista_de_programas_desinstalados.md)
+- [Sobre a alteração de configurações](https://github.com/rubem-psd/W11bALF/blob/main/Recursos/Mais_Informa%C3%A7%C3%B5es/Sobre_a_altera%C3%A7%C3%A3o_de_configura%C3%A7%C3%B5es.md)
+- [Lista de limpeza](https://github.com/rubem-psd/W11bALF/blob/main/Recursos/Mais_Informa%C3%A7%C3%B5es/Lista_de_limpeza.md)
+- [Configurações de hibernação](https://github.com/rubem-psd/W11bALF/blob/main/Recursos/Mais_Informa%C3%A7%C3%B5es/Configura%C3%A7%C3%A3o_de_hiberna%C3%A7%C3%A3o.md)
+- [Limpeza da pasta WinSxS](https://github.com/rubem-psd/W11bALF/blob/main/Recursos/Mais_Informa%C3%A7%C3%B5es/Limpeza_da_pasta_WinSxS.md)
+- [Ativação do Windows 11](https://github.com/rubem-psd/W11bALF/blob/main/Recursos/Mais_Informa%C3%A7%C3%B5es/Ativa%C3%A7%C3%A3o_do_W11.md)
 
 ---
 
