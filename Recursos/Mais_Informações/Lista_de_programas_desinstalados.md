@@ -1,0 +1,71 @@
+# Lista de programas desinstalados
+
+Em breve você poderá escolher quais programas remover, por enquanto, o script remove todos os listados se existirem no sistema.
+
+- 46928bounde.EclipseManager
+- 7EE7776C.LinkedInforWindows
+- 9E2F88E3.Twitter
+- ActiproSoftwareLLC.562882FEEB491
+- AdobeSystemIncorporated.AdobePhotoshop
+- ClearChannelRadioDigital.iHeartRadio
+- Clipchamp.Clipchamp
+- D5EA27B7.Duolingo-LearnLanguagesforFree
+- Flipboard.Flipboard
+- king.com.CandyCrushSaga
+- king.com.CandyCrushSodaSaga
+- Microsoft.3DBuilder
+- Microsoft.549981C3F5F10
+- Microsoft.Advertising.Xaml
+- Microsoft.Appconnector
+- Microsoft.BingFinance
+- Microsoft.BingFoodAndDrink
+- Microsoft.BingNews
+- Microsoft.BingSports
+- Microsoft.BingTranslator
+- Microsoft.BingTravel
+- Microsoft.BingWeather
+- Microsoft.CommsPhone
+- Microsoft.ConnectivityStore
+- Microsoft.FreshPaint
+- Microsoft.GetHelp
+- Microsoft.Getstarted
+- Microsoft.GroupMe10
+- Microsoft.Messaging
+- Microsoft.Microsoft3DViewer
+- Microsoft.MicrosoftOfficeHub
+- Microsoft.MicrosoftPowerBIForWindows
+- Microsoft.MicrosoftSolitaireCollection
+- Microsoft.MinecraftUWP
+- Microsoft.MixedReality.Portal
+- Microsoft.NetworkSpeedTest
+- Microsoft.Office.OneNote
+- Microsoft.Office.Sway
+- Microsoft.OfficeLens
+- Microsoft.OneConnect
+- Microsoft.People
+- Microsoft.PowerAutomateDesktop
+- Microsoft.Print3D
+- Microsoft.SkypeApp
+- Microsoft.Todos
+- Microsoft.Wallet
+- Microsoft.Windows.Cortana
+- Microsoft.Windows.Phone
+- Microsoft.WindowsFeedbackHub
+- Microsoft.WindowsMaps
+- Microsoft.WindowsPhone
+- Microsoft.Xbox.TCUI
+- Microsoft.XboxApp
+- Microsoft.XboxGameOverlay
+- Microsoft.XboxGamingOverlay
+- Microsoft.XboxIdentityProvider
+- Microsoft.XboxSpeechToTextOverlay
+- Microsoft.YourPhone
+- Microsoft.ZuneVideo
+- PandoraMediaInc.29680B314EFC2
+- ReincubateLtd.CamoStudio
+- ShazamEntertainmentLtd.Shazam
+- SpotifyAB.SpotifyMusic
+
+---
+
+[Voltar para a página principal](https://github.com/rubem-psd/W11bALF)
