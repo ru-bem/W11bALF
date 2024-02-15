@@ -11,3 +11,7 @@
 
 ### Serviços essenciais em modo automático
 `AudioEndpointBuilder | Audiosrv | BFE | BrokerInfrastructure | BthAvctpSvc | BthHFSrv | CDPUserSvc_dc2a4 | CoreMessagingRegistrar | CryptSvc | DPS | DcomLaunch | Dhcp | DispBrokerDesktopSvc | Dnscache | DusmSvc | EventLog | EventSystem | FontCache | KeyIso | LSM | LanmanServer | LanmanWorkstation | MpsSvc | OneSyncSvc_dc2a4 | Power | ProfSvc | RpcEptMapper | RpcSs | SENS | SamSs | Schedule | SgrmBroker | ShellHWDetection | Spooler | SysMain | SystemEventsBroker | TermService | Themes | TrkWks | UserManager | VGAuthService | VMTools | VaultSvc | Wcmsvc | WinDefend | Winmgmt | WlanSvc | WpnUserService_dc2a4 | gpsvc | iphlpsvc | mpssvc | nsi | tiledatamodelsvc | webthreatdefusersvc_dc2a4`
+
+---
+
+[Voltar para a página principal](https://github.com/rubem-psd/W11bALF)
