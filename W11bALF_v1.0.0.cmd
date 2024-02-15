@@ -86,7 +86,7 @@ echo [41m[97m▓▒░          VOCÊ NÃO ESTÁ USANDO O WINDOWS 11.         
 echo [41m[97m▓▒░                                                      ░▒▓
 echo [0m[97m
 echo    Tenha em mente que o programa não foi testado em outros
-echo    sistemas. Portanto  podem ocorrer erros inesperados.
+echo    sistemas, portanto, podem ocorrer erros inesperados.
 %underline%
 echo [97m
 echo    Deseja continuar mesmo assim?
