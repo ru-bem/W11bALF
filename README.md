@@ -20,7 +20,7 @@ O **Windows 11 but A Little Faster** é um pequeno programa escrito em [**Batch*
 
 ---
 
-**[🟩 Clique aqui para fazer o download da versão mais recente do script 🟩](https://github.com/rubem-psd/W11bALF/releases/latest)**
+**[⬇️ Clique aqui para fazer o download da versão mais recente do script ⬇️](https://github.com/rubem-psd/W11bALF/releases/latest)**
 
 ---
 
@@ -76,7 +76,7 @@ A limpeza profunda pode ser ativada alterando o valor de “deepclean” na linh
 
 ---
 
-**[🟩 Clique aqui para fazer o download da versão mais recente do script 🟩](https://github.com/rubem-psd/W11bALF/releases/latest)**
+**[⬇️ Clique aqui para fazer o download da versão mais recente do script ⬇️](https://github.com/rubem-psd/W11bALF/releases/latest)**
 
 ---
 
