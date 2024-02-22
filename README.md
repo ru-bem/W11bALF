@@ -1,11 +1,11 @@
-# W11bALF
+# ⚙️ W11bALF
 O **Windows 11 but A Little Faster** é um pequeno programa escrito em [**Batch**](https://en.wikipedia.org/wiki/Batch_file) que foi criado com o objetivo de facilitar o processo de configuração pós-instalação do Windows 11, mas também pode ser usado para fazer limpezas periódicas no sistema e realizar alguns ajustes afim de fazer com que o sistema permaneça o mais otimizado possível.
 
 ![W11bALF_v1 0 0_main](https://github.com/rubem-psd/W11bALF/assets/60861729/7fa114f2-9f72-4392-a82a-8294a525e9fd)
 
 ---
 
-# O que o W11bALF pode fazer?
+# ❔ O que o W11bALF pode fazer?
 **Atualmente, o programa se encontra na versão [v1.0.0](https://github.com/rubem-psd/W11bALF/releases/latest) e é capaz de automatizar os seguintes processos:**
 
 - **[Serviços]** Alterar o modo de inicialização de alguns serviços do windows.
@@ -24,7 +24,7 @@ O **Windows 11 but A Little Faster** é um pequeno programa escrito em [**Batch*
 
 ---
 
-# Switches internos
+# 🔎 Switches internos
 ### - bALFmode (Modo automático)
 
 O **Modo bALF** é o modo automático de do script. Ele pode ser ativado editando a **linha 10** do código, alterando o valor de `balfmode` para 1 ou 2.
@@ -50,7 +50,7 @@ A limpeza profunda pode ser ativada alterando o valor de “deepclean” na linh
 - `deepclean=1` - A função de limpeza do sistema procurará por arquivos de determinadas extensões em **toda a unidade** onde o Windows está instalado.
 ---
 
-# Mais informações
+# ℹ️ Mais informações
 - [Lista de serviços alterados](https://github.com/rubem-psd/W11bALF/blob/main/Recursos/Mais_Informa%C3%A7%C3%B5es/Lista_de_servi%C3%A7os_alterados.md)
 - [Lista de tarefas de telemetria alteradas](https://github.com/rubem-psd/W11bALF/blob/main/Recursos/Mais_Informa%C3%A7%C3%B5es/Lista_de_tarefas_de_telemetria_alteradas.md)
 - [Lista de programas desinstalados](https://github.com/rubem-psd/W11bALF/blob/main/Recursos/Mais_Informa%C3%A7%C3%B5es/Lista_de_programas_desinstalados.md)
@@ -62,7 +62,7 @@ A limpeza profunda pode ser ativada alterando o valor de “deepclean” na linh
 
 ---
 
-# Observações
+# ⭕ Observações
 
 • Tudo é feito de maneira não-destrutiva, ou seja, nenhuma das funções faz nada de maneira que possa causar danos ao sistema como alguns outros scripts.
 
