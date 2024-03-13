@@ -27,7 +27,7 @@ echo:
 echo    Iniciando o programa, aguarde...
 echo:
 :::: Versão
-set _ver=v1.0.0
+set _ver=v1.0.1
 
 :::: Cores
 set cor=
