@@ -20,6 +20,13 @@ set "silent=0"
 :: Ativa o modo de limpeza profunda mas aumenta o tempo de execução consideravelmente. (Valor padrão = 0)
 set "deepclean=0"
 
+:: Tipo de configuração do microsoft edge - 1=basico 2=seguro 3=hardened
+set "medgetipo=1"
+::
+if %medgetipo%==1 set "_medgetipo=basico"
+if %medgetipo%==2 set "_medgetipo=seguro"
+if %medgetipo%==3 set "_medgetipo=hardened"
+set "medgecfgurl="
 :::::::::::::::::::::::::::::::::::::::
 
 title Iniciando o W11bALF
@@ -651,11 +658,14 @@ if %medgecfgconf%==1 (%medgecfg% & call :medgecfg & %endmenu%)
 msg * Esta não é uma opção válida. & goto medgecfgaviso
 
 :medgecfg
+if %medgetipo%==1 set "medgecfgurl=/" & set _medgetipo=basico
+if %medgetipo%==2 set "medgecfgurl=/seguro/" & set _medgetipo=seguro
+if %medgetipo%==3 set "medgecfgurl=/hardened/" & set _medgetipo=hardened
 %medgecfg%
-echo    Configurando o Microsoft Edge...
+echo    Configurando o Microsoft Edge no modo %_medgetipo%...
 taskkill /F /IM "msedge.exe" >nul 2>&1
-curl -o "%localappdata%\Microsoft\Edge\User Data\Default\Preferences." "https://raw.githubusercontent.com/rubem-psd/W11bALF/main/Recursos/Navegadores/Microsoft%%20Edge/Preferences" >nul 2>&1
-curl -o "%localappdata%\Microsoft\Edge\User Data\Default\Secure Preferences." "https://raw.githubusercontent.com/rubem-psd/W11bALF/main/Recursos/Navegadores/Microsoft%%20Edge/Secure%%20Preferences" >nul 2>&1
+curl -o "%localappdata%\Microsoft\Edge\User Data\Default\Preferences." "https://raw.githubusercontent.com/rubem-psd/W11bALF/main/Recursos/Navegadores/Microsoft%%20Edge!medgecfgurl!Preferences" >nul 2>&1
+curl -o "%localappdata%\Microsoft\Edge\User Data\Default\Secure Preferences." "https://raw.githubusercontent.com/rubem-psd/W11bALF/main/Recursos/Navegadores/Microsoft%%20Edge!medgecfgurl!Secure%%20Preferences" >nul 2>&1
 %underline%
 echo:
 goto:eof
@@ -864,9 +874,7 @@ reg query %reg_copilot% >nul 2>&1 & if %errorlevel%==1 reg add %reg_copilot% /t 
 for /f %%G in ('reg query %reg_copilot% ^| find /c "0x1"') do (set copilotoff=%%G)
 
 ::Modo Escuro
-set "reg_light=HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize /v"
-for /f %%G in ('reg query %reg_light% AppsUseLightTheme ^| find /c "0x1"') do (set lightmode=%%G)
-
+for /f %%G in ('reg query HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize /v AppsUseLightTheme ^| find /c "0x1"') do (set lightmode=%%G)
 cls
 call :w11balf_WHT
 echo [107m[30m▓▒░                    Opções extras.                    ░▒▓
@@ -897,13 +905,16 @@ if /i %extra%==R (
 
 if %extra%==2 (if %copilotoff%==0 (reg add %reg_copilot% /t REG_DWORD /d 1 /f & goto extras) else (reg add %reg_copilot% /t REG_DWORD /d 0 /f & goto extras))
 
-if %extra%==1 (if %lightmode%==1 (reg add %reg_light% AppsUseLightTheme /t REG_DWORD /d 0 /f >nul 2>&1 & reg add %reg_light% SystemUsesLightTheme /t REG_DWORD /d 0 /f >nul 2>&1 & goto extras) else (reg add %reg_light% AppsUseLightTheme /t REG_DWORD /d 1 /f >nul 2>&1 & reg add %reg_light% SystemUsesLightTheme /t REG_DWORD /d 1 /f >nul 2>&1 & goto extras))
+if %extra%==1 (if %lightmode%==1 (start %windir%\Resources\Themes\dark.theme & for /l %%G in (1,1,10) do (timeout /t 1 >nul & tasklist | find /i "SystemSettings.exe" >nul && (taskkill /F /IM "SystemSettings.exe" >nul 2>&1 & goto extras))) else (start %windir%\Resources\Themes\aero.theme & for /l %%G in (1,1,10) do (timeout /t 1 >nul & tasklist | find /i "SystemSettings.exe" >nul && (taskkill /F /IM "SystemSettings.exe" >nul 2>&1 & goto extras))))
 
 if %extra%==0 (goto w11menu)
 goto extras
 
 
 :configs
+if %medgetipo%==1 set "_medgetipo=basico"
+if %medgetipo%==2 set "_medgetipo=seguro"
+if %medgetipo%==3 set "_medgetipo=hardened"
 cls
 call :w11balf_WHT
 echo [107m[30m▓▒░               Configurações do W11bALF               ░▒▓
@@ -918,7 +929,8 @@ if %deepclean%==1 set stt1=[92m██[97m
 set %errorlevel%=0
 
 echo    [1] %stt1% %brutcfg% %reset%
-echo    [2] Voltar ao menu
+echo    [2] Tipo de configuração do Edge: %_medgetipo%
+echo    [3] Voltar ao menu
 echo:
 echo:
 echo:
@@ -929,9 +941,10 @@ echo:
 echo:
 echo        [90mMais opções em breve!
 
-choice /c 12 /n 
-if %errorlevel% EQU 2 (goto w11menu)
-if %errorlevel% EQU 1 (if %deepclean% EQU 1 (set deepclean=0) else (set deepclean=1) & goto configs)
+set /p "config=" 
+if %config%==3 (goto w11menu)
+if %config%==2 (if %medgetipo%==1 set medgetipo=2 & goto configs) & (if %medgetipo%==2 set medgetipo=3 & goto configs) & (if %medgetipo%==3 set medgetipo=1 & goto configs)
+if %config%==1 (if %deepclean% EQU 1 (set deepclean=0) else (set deepclean=1) & goto configs)
 goto configs
 
 ::
