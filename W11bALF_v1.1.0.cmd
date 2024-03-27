@@ -163,6 +163,7 @@ if %errorlevel%==1 goto w11menu
 ::
 :w11menu
 mode con:cols=60 lines=37
+if %balfmode% NEQ 0 goto oneclick
 echo %reset%
 cls
 title W11bAlf %_ver%
@@ -731,12 +732,7 @@ reg add HKCU\Software\Policies\Microsoft\Windows\Explorer /v DisableSearchBoxSug
 reg add HKCU\System\GameConfigStore /v GameDVR_Enabled /t REG_DWORD /d 0 /f >nul 2>&1
 reg delete HKCU\Software\Microsoft\Siuf\Rules /v PeriodInNanoSeconds /f >nul 2>&1
 taskkill /f /im explorer.exe >nul 2>&1 & start explorer.exe >nul 2>&1
-timeout /t 1 >nul 2>&1
-:: Checagem dupla
-tasklist /fi "imagename eq explorer.exe" 2>nul | find /i "explorer.exe" >nul
-if %errorlevel% NEQ 0 (timeout /t 1 >nul & start explorer.exe >nul 2>&1)
-tasklist /fi "imagename eq explorer.exe" 2>nul | find /i "explorer.exe" >nul
-if %errorlevel% NEQ 0 (timeout /t 1 >nul & start explorer.exe >nul 2>&1)
+for /l %%G in (1,1,4) do (timeout /t 1 >nul & tasklist | find /i "explorer.exe" >nul || (start explorer.exe))
 echo [2A                                                            
 goto:eof
 
@@ -964,8 +960,7 @@ del /f /s /q %localappdata%\Packages\Microsoft.Windows.StartMenuExperienceHost_c
 certutil -decode %temp%\start2enc.bin %localappdata%\Packages\Microsoft.Windows.StartMenuExperienceHost_cw5n1h2txyewy\LocalState\start2.bin >nul 2>&1
 timeout /t 1 >nul 2>&1
 taskkill /f /im explorer.exe >nul 2>&1 & start explorer.exe >nul 2>&1
-timeout /t 1 >nul 2>&1
-tasklist /fi "imagename eq explorer.exe" 2>nul | find /i "explorer.exe" >nul
+for /l %%G in (1,1,4) do (timeout /t 1 >nul & tasklist | find /i "explorer.exe" >nul || (start explorer.exe))
 echo:
 %middleline%
 echo:
@@ -1220,8 +1215,7 @@ set /p "extra=⠀⠀⠀["
 
 if /i %extra%==R (
 	taskkill /im explorer.exe /f >nul 2>&1
-	start explorer.exe >nul 2>&1
-	for /l %%G in (1,1,5) do (timeout /t 1 >nul & tasklist | find /i "explorer.exe" >nul || (start explorer.exe >nul 2>&1 & goto extras) && goto extras))
+	for /l %%G in (1,1,4) do (timeout /t 1 >nul & tasklist | find /i "explorer.exe" >nul || (start explorer.exe >nul 2>&1 & goto extras) && goto extras))
 
 if %extra%==2 (if %copilotoff%==0 (reg add %reg_copilot% /t REG_DWORD /d 1 /f & goto extras) else (reg add %reg_copilot% /t REG_DWORD /d 0 /f & goto extras))
 
