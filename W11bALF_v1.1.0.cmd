@@ -731,7 +731,7 @@ reg add HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\Inpro
 reg add HKCU\Software\Policies\Microsoft\Windows\Explorer /v DisableSearchBoxSuggestions /t REG_DWORD /d 1 /f >nul 2>&1
 reg add HKCU\System\GameConfigStore /v GameDVR_Enabled /t REG_DWORD /d 0 /f >nul 2>&1
 reg delete HKCU\Software\Microsoft\Siuf\Rules /v PeriodInNanoSeconds /f >nul 2>&1
-taskkill /f /im explorer.exe >nul 2>&1 & start explorer.exe >nul 2>&1
+taskkill /f /im explorer.exe >nul 2>&1
 for /l %%G in (1,1,4) do (timeout /t 1 >nul & tasklist | find /i "explorer.exe" >nul || (start explorer.exe))
 echo [2A                                                            
 goto:eof
