@@ -25,6 +25,17 @@ O **Windows 11 but A Little Faster** é um pequeno programa escrito em [**Batch*
 
 ---
 
+# ▶️ Roadmap
+
+Próxima versão: v1.1.1
+
+- 🔳 Revisar as presets de configuração do Edge (Remover essa opção, talvez).
+- 🔳 Adicionar a opção de retornar ao menu de contexto moderno.
+- 🔳 Pequenos ajustes estéticos.
+- 🔳 Mais (?)
+
+---
+
 # 🔎 Configurações
 As configurações do programa estão armazenadas entre as linhas 7 e 69 do código, e podem ser personalizadas de acordo com o seu uso.
 
