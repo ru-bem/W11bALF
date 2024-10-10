@@ -27,12 +27,23 @@ O **Windows 11 but A Little Faster** é um pequeno programa escrito em [**Batch*
 
 # ▶️ Roadmap
 
-Próxima versão: v1.1.1
+Próxima versão: v1.2
 
+- ✅ Adicionar a possibilidade de instalar e desinstalar a Microsoft Store para versões LTSC do Windows 11.
+- ✅ Adicionar a possibilidade de instalar o Winget para versões LTSC do Windows 11.
+- ✅ Opção para alternar entre o menu de contexto moderno e clássico.
+- ✅ Atualizar a forma como o script de ativação do Windows é executado.
+- ✅ Pequenos ajustes estéticos.
 - 🔳 Revisar as presets de configuração do Edge (Remover essa opção, talvez).
-- 🔳 Adicionar a opção de retornar ao menu de contexto moderno.
-- 🔳 Pequenos ajustes estéticos.
-- 🔳 Mais (?)
+
+Futuro: v2.0
+- 🔳 Revisar e reescrever todo o código afim de deixá-lo o menor e mais otimizado possível.
+- 🔳 Grandes mudanças na interface.
+- 🔳 Atualização e adição de várias funções.
+- 🔳 Instalação silenciosa do Office365.
+- 🔳 Criar uma versão totalmente em inglês.
+- 🔳 Facilitar ao máximo a adição de novos recursos.
+- 🔳 Mais... (?)
 
 ---
 
