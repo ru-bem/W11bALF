@@ -1,13 +1,16 @@
 # W11bALF
 O **Windows 11 but A Little Faster** é um pequeno programa escrito em [**Batch**](https://en.wikipedia.org/wiki/Batch_file) que foi criado com o objetivo de facilitar o processo de configuração pós-instalação do Windows 11, mas também pode ser usado para fazer limpezas periódicas no sistema e realizar alguns ajustes afim de fazer com que o sistema permaneça o mais otimizado possível.
 
-![w11balfv1 1 0](https://github.com/rubem-psd/W11bALF/assets/60861729/519ab725-76b9-462d-9dcd-d03718b56205)
+---
+##### < Na Esquerda: MENU PRINCIPAL <⠀⠀⠀|||⠀⠀⠀> Na Direita: OPÇÕES EXTRAS >
+![w11balf_menu+extras](https://github.com/user-attachments/assets/768366ef-ac58-4c66-b26e-d80aaa19afa0)
+
 
 
 ---
 
 # ❔ O que o W11bALF pode fazer?
-**Atualmente, o programa se encontra na versão [v1.1.0](https://github.com/rubem-psd/W11bALF/releases/latest) e é capaz de automatizar os seguintes processos:**
+**Atualmente, o programa se encontra na versão [v1.2.0](https://github.com/rubem-psd/W11bALF/releases/latest) e é capaz de automatizar os seguintes processos:**
 
 - **[Serviços]** Alterar o modo de inicialização de alguns serviços do windows.
 - **[Telemetria]** Reduzir a coleta de dados de uso pela Microsoft.
@@ -18,6 +21,8 @@ O **Windows 11 but A Little Faster** é um pequeno programa escrito em [**Batch*
 - **[Microsoft Edge]** Configurar o Edge com presets diversos (Experimental).
 - **[Hibernação]** Ajustar a hibernação para HDDs, SSDs e NVMEs.
 - **[Ativação]** Ativar o Windows 11.
+- **[LTSC]** Instalar a Microsoft Store nas versões LTSC do W11.
+- **[LTSC]** Instalar o Winget nas versões LTSC do W11.
 
 ---
 
@@ -26,15 +31,6 @@ O **Windows 11 but A Little Faster** é um pequeno programa escrito em [**Batch*
 ---
 
 # ▶️ Roadmap
-
-Próxima versão: v1.2
-
-- ✅ Adicionar a possibilidade de instalar e desinstalar a Microsoft Store para versões LTSC do Windows 11.
-- ✅ Adicionar a possibilidade de instalar o Winget para versões LTSC do Windows 11.
-- ✅ Opção para alternar entre o menu de contexto moderno e clássico.
-- ✅ Atualizar a forma como o script de ativação do Windows é executado.
-- ✅ Pequenos ajustes estéticos.
-- 🔳 Revisar as presets de configuração do Edge (Remover essa opção, talvez).
 
 Futuro: v2.0
 - 🔳 Revisar e reescrever todo o código afim de deixá-lo o menor e mais otimizado possível.
@@ -124,10 +120,11 @@ Ao fim do processo de desinstalação padrão de bloatware duas desinstalações
 **[⬇️ Clique aqui para fazer o download da versão mais recente do script ⬇️](https://github.com/rubem-psd/W11bALF/releases/latest)**
 
 ---
+Se puder, contribua com o projeto: [livepix.gg/rubem](https://livepix.gg/rubem)
 
 Para relatar bugs, enviar sugestões ou fazer perguntas use a aba [issues](https://github.com/rubem-psd/W11bALF/issues) na página principal. Por favor, use a label correspondente ao tipo de mensagem.
 
 Você também pode falar diretamente comigo atráves do [Discord](https://discord.com/users/196300526139342848).
 
 ---
-##### W11bALF - Windows 11 but A Little Faster - v1.1.0⠀⠀⠀|||⠀⠀⠀Criado com ❤️ por Rubem Júnior⠀⠀⠀|||⠀⠀⠀2024
+##### W11bALF - Windows 11 but A Little Faster - v1.2.0⠀⠀⠀|||⠀⠀⠀Criado com ❤️ por Rubem⠀⠀⠀|||⠀⠀⠀Obrigado pelo apoio!
