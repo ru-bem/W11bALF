@@ -30,19 +30,6 @@ O **Windows 11 but A Little Faster** é um pequeno programa escrito em [**Batch*
 
 ---
 
-# ▶️ Roadmap
-
-Futuro: v2.0
-- 🔳 Revisar e reescrever todo o código afim de deixá-lo o menor e mais otimizado possível.
-- 🔳 Grandes mudanças na interface.
-- 🔳 Atualização e adição de várias funções.
-- 🔳 Instalação silenciosa do Office365.
-- 🔳 Criar uma versão totalmente em inglês.
-- 🔳 Facilitar ao máximo a adição de novos recursos.
-- 🔳 Mais... (?)
-
----
-
 # 🔎 Configurações
 As configurações do programa estão armazenadas entre as linhas 7 e 69 do código, e podem ser personalizadas de acordo com o seu uso.
 
