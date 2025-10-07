@@ -10,7 +10,7 @@ O **Windows 11 but A Little Faster** é um pequeno programa escrito em [**Batch*
 ---
 
 # ❔ O que o W11bALF pode fazer?
-**Atualmente, o programa se encontra na versão [v1.2.0](https://github.com/rubem-psd/W11bALF/releases/latest) e é capaz de automatizar os seguintes processos:**
+**Atualmente, o programa se encontra na versão [v1.3.0](https://github.com/rubem-psd/W11bALF/releases/latest) e é capaz de automatizar os seguintes processos:**
 
 - **[Serviços]** Alterar o modo de inicialização de alguns serviços do windows.
 - **[Telemetria]** Reduzir a coleta de dados de uso pela Microsoft.
@@ -114,4 +114,4 @@ Para relatar bugs, enviar sugestões ou fazer perguntas use a aba [issues](https
 Você também pode falar diretamente comigo atráves do [Discord](https://discord.com/users/196300526139342848).
 
 ---
-##### W11bALF - Windows 11 but A Little Faster - v1.2.0⠀⠀⠀|||⠀⠀⠀Criado com ❤️ por Rubem⠀⠀⠀|||⠀⠀⠀Obrigado pelo apoio!
+##### W11bALF - Windows 11 but A Little Faster - v1.3.0⠀⠀⠀|||⠀⠀⠀Criado com ❤️ por Rubem⠀⠀⠀|||⠀⠀⠀Obrigado pelo apoio!
