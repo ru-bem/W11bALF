@@ -109,6 +109,15 @@ Ao fim do processo de desinstalação padrão de bloatware duas desinstalações
 
 ---
 
+# ⏳ Futuro
+
+- Cada função do W11bALF poderá ser usada separadamente com os arquivos de execução isolada. É como uma versão "Super ultra mega lite" de um programa que já é muito leve e rápido.
+- O processo de limpeza será melhorado e um nível mais rápido será adicionado para usuários em HDDs.
+- A configuração automática do Microsoft Edge será melhorada.
+- A instalação do Office será automatizada.
+
+---
+
 **[⬇️ Clique aqui para fazer o download da versão mais recente do script ⬇️](https://github.com/rubem-psd/W11bALF/releases/latest)**
 
 ---
