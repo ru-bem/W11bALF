@@ -23,6 +23,12 @@ O **Windows 11 but A Little Faster** é um pequeno programa escrito em [**Batch*
 - **[LTSC]** Instalar a Microsoft Store nas versões LTSC do W11.
 - **[LTSC]** Instalar o Winget nas versões LTSC do W11.
 
+E mais! (Extras)
+- Desativar ou ativar o Microsoft Copilot.
+- Alternar facilmente entre o Menu de Contexto Clássico e o Moderno.
+- Ocultar ou exibir o "Início" e a "Galeria" do explorador de arquivos.
+- Remover o Xbox App (Incluindo o popup persistente toda vez que um jogo é aberto)
+
 ---
 
 **[⬇️ Clique aqui para fazer o download da versão mais recente do script ⬇️](https://github.com/rubem-psd/W11bALF/releases/latest)**
