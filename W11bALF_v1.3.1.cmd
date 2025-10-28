@@ -144,7 +144,7 @@ call :net_chk
 if %ison%==1 (goto update_chk) else (goto w11_chk)
 
 :update_chk	
-for /f %%G in ('curl -s https://raw.githubusercontent.com/ru-bem/W11bALF/refs/heads/main/Recursos/ver') do set /a "ver_new_raw=%%G"
+for /f %%G in ('curl -s https://codeberg.org/rubem/W11bALF/raw/branch/main/Recursos/ver') do set /a "ver_new_raw=%%G"
 set "ver_new_ajustada=!ver_new_raw:~0,1!.!ver_new_raw:~1,1!.!ver_new_raw:~2,1!"
 for /f "tokens=1-3 delims=." %%a in ("%_ver%") do (set "ver_major=%%a" & set "ver_minor=%%b" & set "ver_patch=%%c")
 set /a "_ver_num=%ver_major%%ver_minor%%ver_patch%"
@@ -968,8 +968,8 @@ if %medgetipo%==3 set "medgecfgurl=/hardened/" & set _medgetipo=hardened
 %medgecfg%
 echo    Configurando o Microsoft Edge no modo %_medgetipo%...
 taskkill /F /IM "msedge.exe" >nul 2>&1
-curl -o "%localappdata%\Microsoft\Edge\User Data\Default\Preferences." "https://raw.githubusercontent.com/ru-bem/W11bALF/main/Recursos/Navegadores/Microsoft%%20Edge!medgecfgurl!Preferences" >nul 2>&1
-curl -o "%localappdata%\Microsoft\Edge\User Data\Default\Secure Preferences." "https://raw.githubusercontent.com/ru-bem/W11bALF/main/Recursos/Navegadores/Microsoft%%20Edge!medgecfgurl!Secure%%20Preferences" >nul 2>&1
+curl -o "%localappdata%\Microsoft\Edge\User Data\Default\Preferences." "https://codeberg.org/rubem/W11bALF/raw/branch/main/Recursos/Navegadores/Microsoft%%20Edge!medgecfgurl!Preferences" >nul 2>&1
+curl -o "%localappdata%\Microsoft\Edge\User Data\Default\Secure Preferences." "https://codeberg.org/rubem/W11bALF/raw/branch/main/Recursos/Navegadores/Microsoft%%20Edge!medgecfgurl!Secure%%20Preferences" >nul 2>&1
 %middleline%
 echo:
 goto:eof
