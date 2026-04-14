@@ -2,6 +2,7 @@
 O **Windows 11 but A Little Faster** é um pequeno programa escrito em [**Batch**](https://en.wikipedia.org/wiki/Batch_file) que foi criado com o objetivo de facilitar o processo de configuração pós-instalação do Windows 11, mas também pode ser usado para fazer limpezas periódicas no sistema e realizar alguns ajustes de maneira muito facilitada.
 
 ### **[:: ⬇️ Download da versão mais recente ::](https://github.com/ru-bem/W11bALF/releases/latest/download/W11bALF_v1.3.1.cmd)**
+###### (2026-04-14: Atualização v1.4.0 chegando nas próximas semanas.)
 
 ---
 ###### < Imagem do MENU PRINCIPAL <⠀⠀⠀ ⠀⠀⠀⠀  ⠀⠀⠀ ⠀⠀⠀⠀⠀|||||⠀⠀⠀⠀⠀⠀    ⠀ ⠀⠀⠀⠀⠀⠀⠀⠀> Imagem das OPÇÕES EXTRAS >
