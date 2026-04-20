@@ -1079,7 +1079,6 @@ echo:
 echo    %progstep1% Logs do Fortnite
 echo    %progstep1% Cache e Logs do Roblox
 
-pause
 ::────────────────────────────────────────────────────────────
 ::────────────────────────────────────────────────────────────
 
