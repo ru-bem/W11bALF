@@ -5,8 +5,8 @@ O **Windows 11 but A Little Faster** é um pequeno programa escrito em [**Batch*
 ###### (2026-04-14: Atualização v1.4.0 chegando em breve.)
 
 ---
-###### < Imagem do MENU PRINCIPAL <⠀⠀⠀ ⠀⠀⠀⠀  ⠀⠀⠀ ⠀⠀⠀⠀⠀|||||⠀⠀⠀⠀⠀⠀    ⠀ ⠀⠀⠀⠀⠀⠀⠀⠀> Imagem das OPÇÕES EXTRAS >
-<img width="360" height="545" alt="main" src="https://github.com/user-attachments/assets/eb8ef19d-35da-40e2-8ff5-7f54ed4ce309" /> <img width="360" height="545" alt="extras" src="https://github.com/user-attachments/assets/dd5f674d-4f24-432a-9537-11c57915b619" />
+###### < Imagem do MENU PRINCIPAL <⠀⠀⠀ ⠀⠀⠀⠀  ⠀⠀⠀⠀⠀⠀|||||⠀⠀⠀⠀⠀⠀    ⠀⠀⠀⠀⠀⠀⠀> Imagem das OPÇÕES EXTRAS >
+<img height="512" alt="main" src="https://github.com/user-attachments/assets/eb8ef19d-35da-40e2-8ff5-7f54ed4ce309" /> <img height="512" alt="extras" src="https://github.com/user-attachments/assets/dd5f674d-4f24-432a-9537-11c57915b619" />
 
 
 ---
