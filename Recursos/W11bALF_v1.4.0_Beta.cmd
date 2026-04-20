@@ -32,10 +32,10 @@ set "balftime=5"
 set "silent=0"
 
 
-:::: Deseja ativar o modo de limpeza profunda? (Aumenta o tempo de execução consideravelmente em SSDs e NVMEs e aumente o tempo BRUTALMENTE em HDDs)
+:::: Deseja ativar a limpeza+? Adiciona algumas pastas e arquivos extras a tarefa de limpeza. Dê uma olhada em :limpeza_plus para ver o que será limpo. Essa lista será atualizada a medida que for necessário.
 :: Padrão = 0
 ::             ↓
-set "deepclean=0"
+set "limpeza_plus=1"
 
 
 :::: Qual preset de configuração deseja aplicar no Microsoft Edge?
@@ -122,8 +122,7 @@ set "svc_tele=cls & title W11bAlf v%_ver% - Serviços e Telemetria        & call
 set "bloatwre=cls & title W11bAlf v%_ver% - Remoção de Bloatware         & call :w11balf_wht & echo %cin13%▓▒░       Removendo Aplicativos Inúteis do Sistema       ░▒▓& %wline% & echo [1A%cin03%"
 set "winconfg=cls & title W11bAlf v%_ver% - Configurações do Windows     & call :w11balf_wht & echo %cin13%▓▒░          Fazendo alguns ajustes no Sistema.          ░▒▓& %wline% & echo [1A%cin03%"
 set "limpezao=cls & title W11bAlf v%_ver% - Limpeza do sistema           & call :w11balf_wht & echo %cin13%▓▒░                  Limpeza do Sistema                  ░▒▓& %wline% & echo [1A%cin03%"
-set "limpbrut=cls & title W11bAlf v%_ver% - Limpeza do sistema - Profundo& call :w11balf_wht & echo %red11%▓▒░      Limpeza do Sistema - Modo Profundo Ativado      ░▒▓& %wline% & echo [1A%cin03%"
-set "medgecfg=cls & title W11bAlf v%_ver% - Configuração do MS Edge      & call :w11balf_wht & echo %cin13%▓▒░        Configuração do MS Edge -EXPERIMENTAL-        ░▒▓& %wline% & echo [1A%cin03%"
+:: set "medgecfg=cls & title W11bAlf v%_ver% - Configuração do MS Edge      & call :w11balf_wht & echo %cin13%▓▒░        Configuração do MS Edge -EXPERIMENTAL-        ░▒▓& %wline% & echo [1A%cin03%"
 set "startmnu=cls & title W11bAlf v%_ver% - Limpeza do Menu Iniciar      & call :w11balf_wht & echo %cin13%▓▒░               Limpeza do Menu Iniciar.               ░▒▓& %wline% & echo [1A%cin03%"
 set "hiberfil=cls & title W11bAlf v%_ver% - Configurações de Hibernação  & call :w11balf_wht & echo %cin13%▓▒░             Configurações de Hibernação.             ░▒▓& %wline% & echo [1A%cin03%"
 set "clwinsxs=cls & title W11bAlf v%_ver% - Limpeza da pasta WinSxS      & call :w11balf_wht & echo %cin13%▓▒░               Limpeza da pasta WinSxS.               ░▒▓& %wline% & echo [1A%cin03%"
@@ -207,7 +206,6 @@ echo ░▒▓%cin13%  [ 2]  %reset%  Serviços e Telemetria %cin01%────
 echo ░▒▓%cin13%  [ 3]  %reset%  Desinstalar Bloatware %cin01%─────────────────────%reset%█▓▒░
 echo ░▒▓%cin13%  [ 4]  %reset%  Configurar o Windows %cin01%──────────────────────%reset%█▓▒░
 echo ░▒▓%cin13%  [ 5]  %reset%  Limpeza do Sistema %cin01%────────────────────────%reset%█▓▒░
-if %deepclean%==1 (echo [1A░▒▓%cin13%  [ 5]  %reset%  Limpeza do Sistema %cin01%^| %grn01%Modo profundo ativado%cin01% %reset%█▓▒░)
 echo ░▒▓%cin13%  [ 6]  %reset%  Limpar Menu Iniciar e Taskbar %cin01%─────────────%reset%█▓▒░
 echo ░▒▓%cin13%  [ 7]  %reset%  Configurar Hibernação %cin01%─────────────────────%reset%█▓▒░
 echo ░▒▓%cin13%  [ 8]  %reset%  Limpar a pasta WinSxS %cin01%─────────────────────%reset%█▓▒░
@@ -245,7 +243,7 @@ if %w11c%==9 (%ativaw11% & call :ativaw11_info & %endmenu%)
 if %w11c%==8 (%clwinsxs% & call :clwinsxs_info & %endmenu%)
 if %w11c%==7 (set hiberauto=0 & %hiberfil% & call :hiberfil & %endmenu%)
 if %w11c%==6 (call :startmnu_info & %endmenu%)
-if %w11c%==5 (if %deepclean%==0 (%limpezao% & call :limpezao_info & %endmenu%) else (%limpbrut% & call :limpezao_info & %endmenu%))
+if %w11c%==5 (%limpezao% & call :limpezao_info & %endmenu%)
 if %w11c%==4 (%winconfg% & call :winconfg_info & %endmenu%) 
 if %w11c%==3 (%bloatwre% & call :bloatwre_info & %endmenu%)
 if %w11c%==2 (%svc_tele% & call :svc_tele_info & %endmenu%)
@@ -559,46 +557,278 @@ set progstep2=█
 set progstep3=%grn01%█
 
 :: Tela principal - Serviços e telemetria
-echo    %progstep1% Desativando alguns serviços... %reset%
-echo ⠀  %progstep1% Alterando outros para o modo manual... %reset%
-echo    %progstep1% Alterando outros para o modo automático com delay... %reset%
-echo    %progstep1% Setando alguns essenciais para o modo automático... %reset%
+echo    %progstep1% Desativando serviços... %reset%
+echo    %progstep1% Definindo inicio manual... %reset%
+echo    %progstep1% Definindo início automático com delay... %reset%
+echo    %progstep1% Definindo início automático... %reset%
 echo    %progstep1% Reduzindo a Telemetria... %reset%
 
 timeout /t 1 >nul
 
-:: Serviços para desativar
-echo [5A   %progstep2% Desativando alguns serviços... %reset%
+echo [5A   %progstep2% Desativando serviços... %reset%
+for %%G in (
+AppVClient
+AssignedAccessManagerSvc
+DiagTrack
+DialogBlockingService
+NetTcpPortSharing
+RemoteAccess
+RemoteRegistry
+UevAgentService
+shpamsvc
+ssh-agent
+) do (sc config %%G start=disabled >nul 2>&1)
+echo [1A   %progstep3% Desativando serviços... %reset%
 
-for %%G in (AJRouter AppVClient AssignedAccessManagerSvc DiagTrack DialogBlockingService NetTcpPortSharing RemoteAccess RemoteRegistry UevAgentService shpamsvc ssh-agent uhssvc XblAuthManager XblGameSave XboxNetApiSvc) do (sc config %%G start= disabled >nul 2>&1)
-	
-echo [1A   %progstep3% Desativando alguns serviços... %reset%
-:: Serviços para alterar para o modo manual
-echo    %progstep2% Alterando outros para o modo manual... %reset%
 
-for %%G in (ALG AppIDSvc AppMgmt AppReadiness AppXSvc Appinfo AxInstSV BDESVC BTAGService BcastDVRUserService BluetoothUserService Browser COMSysApp CaptureService CertPropSvc ClipSVC ConsentUxUserSvc CredentialEnrollmentManagerUserSvc CscService DcpSvc DevQueryBroker DeviceAssociationBrokerSvc DeviceAssociationService DeviceInstall DevicePickerUserSvc DevicesFlowUserSvc DisplayEnhancementService DmEnrollmentSvc DsSvc DsmSvc EFS EapHost EntAppSvc FDResPub Fax FrameServer FrameServerMonitor GraphicsPerfSvc HomeGroupListener HomeGroupProvider HvHost IEEtwCollectorService IKEEXT InstallService InventorySvc IpxlatCfgSvc KtmRm LicenseManager LxpSvc MSDTC MSiSCSI McpManagementService MessagingService MicrosoftEdgeElevationService MixedRealityOpenXRSvc MsKeyboardFilter NPSMSvc NaturalAuthentication NcaSvc NcbService NcdAutoSetup NetSetupSvc Netlogon Netman NgcCtnrSvc NgcSvc NlaSvc P9RdrService PNRPAutoReg PNRPsvc PcaSvc PeerDistSvc PenService PerfHost PhoneSvc PimIndexMaintenanceSvc PlugPlay PolicyAgent PrintNotify PrintWorkflowUserSvc PushToInstall QWAVE RasAuto RasMan RetailDemo RmSvc RpcLocator SCPolicySvc SCardSvr SDRSVC SEMgrSvc SNMPTRAP SNMPTrap SSDPSRV ScDeviceEnum SecurityHealthService Sense SensorDataService SensorService SensrSvc SessionEnv SharedAccess SharedRealitySvc SmsRouter SstpSvc StateRepository StiSvc StorSvc TabletInputService TapiSrv TextInputManagementService TieringEngineService TimeBroker TimeBrokerSvc TokenBroker TroubleshootingSvc TrustedInstaller UI0Detect UdkUserSvc UmRdpService UnistoreSvc UserDataSvc UsoSvc VSS VacSvc W32Time WEPHOSTSVC WFDSConMgrSvc WMPNetworkSvc WManSvc WPDBusEnum WSService WaaSMedicSvc WalletService WarpJITSvc WbioSrvc WcsPlugInService WdNisSvc WdiServiceHost WdiSystemHost WebClient Wecsvc WerSvc WiaRpc WinHttpAutoProxySvc WinRM WpcMonSvc WpnService WwanSvc XblAuthManager XblGameSave XboxGipSvc XboxNetApiSvc autotimesvc bthserv camsvc cbdhsvc cloudidsvc dcsvc defragsvc diagnosticshub.standardcollector.service diagsvc dmwappushservice dot3svc edgeupdate edgeupdatem embeddedmode fdPHost fhsvc hidserv icssvc lfsvc lltdsvc lmhosts msiserver netprofm p2pimsvc p2psvc perceptionsimulation pla seclogon smphost spectrum svsvc swprv upnphost vds vm3dservice vmicguestinterface vmicheartbeat vmickvpexchange vmicrdv vmicshutdown vmictimesync vmicvmsession vmicvss vmvss wbengine wcncsvc webthreatdefsvc wercplsupport wisvc wlidsvc wlpasvc wmiApSrv workfolderssvc wuauserv wudfsvc) do (sc config %%G start= demand >nul 2>&1)
 
-echo [1A   %progstep3% Alterando outros para o modo manual... %reset%
+echo    %progstep2% Definindo inicio manual... %reset%
+for %%G in (
+ALG
+AppMgmt
+AppReadiness
+Appinfo
+AxInstSV
+BDESVC
+BTAGService
+CDPSvc
+COMSysApp
+CertPropSvc
+CscService
+DevQueryBroker
+DeviceAssociationService
+DeviceInstall
+EFS
+EapHost
+FDResPub
+FrameServer
+FrameServerMonitor
+GraphicsPerfSvc
+HvHost
+IKEEXT
+InstallService
+InventorySvc
+IpxlatCfgSvc
+KtmRm
+LicenseManager
+LxpSvc
+MSDTC
+MSiSCSI
+McpManagementService
+MicrosoftEdgeElevationService
+NaturalAuthentication
+NcaSvc
+NcbService
+NcdAutoSetup
+NetSetupSvc
+Netman
+NlaSvc
+PcaSvc
+PeerDistSvc
+PerfHost
+PhoneSvc
+PlugPlay
+PolicyAgent
+PrintNotify
+PushToInstall
+QWAVE
+RasAuto
+RasMan
+RetailDemo
+RmSvc
+RpcLocator
+SCPolicySvc
+SCardSvr
+SDRSVC
+SEMgrSvc
+SNMPTRAP
+SNMPTrap
+SSDPSRV
+ScDeviceEnum
+SensorDataService
+SensorService
+SensrSvc
+SessionEnv
+SharedAccess
+SmsRouter
+SstpSvc
+StiSvc
+StorSvc
+SunshineService
+TapiSrv
+TermService
+TieringEngineService
+TokenBroker
+TroubleshootingSvc
+TrustedInstaller
+UmRdpService
+UsoSvc
+VSS
+VaultSvc
+W32Time
+WEPHOSTSVC
+WFDSConMgrSvc
+WMPNetworkSvc
+WManSvc
+WPDBusEnum
+WSAIFabricSvc
+WalletService
+WarpJITSvc
+WbioSrvc
+WdiServiceHost
+WdiSystemHost
+WebClient
+Wecsvc
+WerSvc
+WiaRpc
+WinRM
+WpcMonSvc
+WpnService
+XblAuthManager
+XblGameSave
+XboxGipSvc
+XboxNetApiSvc
+autotimesvc
+bthserv
+camsvc
+cloudidsvc
+dcsvc
+defragsvc
+diagsvc
+dmwappushservice
+dot3svc
+edgeupdate
+edgeupdatem
+fdPHost
+fhsvc
+hidserv
+icssvc
+lfsvc
+lltdsvc
+lmhosts
+netprofm
+perceptionsimulation
+pla
+seclogon
+smphost
+svsvc
+swprv
+upnphost
+vds
+vmicguestinterface
+vmicheartbeat
+vmickvpexchange
+vmicrdv
+vmicshutdown
+vmictimesync
+vmicvmsession
+vmicvss
+wbengine
+wcncsvc
+webthreatdefsvc
+wercplsupport
+wisvc
+wlidsvc
+wlpasvc
+wmiApSrv
+workfolderssvc
+wuauserv
+) do (sc config %%G start=demand >nul 2>&1)
+echo [1A   %progstep3% Definindo inicio manual... %reset%
 
-:: Serviços para alterar para o modo automático com delay
-echo    %progstep2% Alterando outros para o modo automático com delay... %reset%
 
-for %%G in (BITS DoSvc MapsBroker WSearch sppsvc wscsvc) do (sc config %%G start= delayed-auto >nul 2>&1)
 
-echo [1A   %progstep3% Alterando outros para o modo automático com delay... %reset%
+echo    %progstep2% Definindo início automático com delay... %reset%
+for %%G in (
+BITS
+MapsBroker
+WSearch
+) do (sc config %%G start=delayed-auto >nul 2>&1)
+echo [1A   %progstep3% Definindo início automático com delay... %reset%
 
-:: Serviços para alterar para o modo automático
-echo    %progstep2% Setando alguns essenciais para o modo automático... %reset%
 
-for %%G in (AudioEndpointBuilder Audiosrv BFE BrokerInfrastructure BthAvctpSvc BthHFSrv CDPSvc CDPUserSvc CoreMessagingRegistrar CryptSvc DPS DcomLaunch Dhcp DispBrokerDesktopSvc Dnscache DusmSvc EventLog EventSystem FontCache KeyIso LSM LanmanServer LanmanWorkstation MpsSvc OneSyncSvc Power ProfSvc RpcEptMapper RpcSs SENS SamSs Schedule SgrmBroker ShellHWDetection Spooler SysMain SystemEventsBroker TermService Themes TrkWks UserManager VGAuthService VMTools VaultSvc Wcmsvc WinDefend Winmgmt WlanSvc WpnUserService gpsvc iphlpsvc mpssvc nsi tiledatamodelsvc webthreatdefusersvc) do (sc config %%G start= auto >nul 2>&1)
 
-echo [1A   %progstep3% Setando alguns essenciais para o modo automático... %reset%
-:: Telemetria
+echo    %progstep2% Definindo início automático... %reset%
+
+for %%G in (
+AudioEndpointBuilder
+AudioSrv
+Audiosrv
+BthAvctpSvc
+CryptSvc
+DPS
+Dhcp
+DispBrokerDesktopSvc
+EventLog
+EventSystem
+FontCache
+KeyIso
+LanmanServer
+LanmanWorkstation
+Power
+ProfSvc
+SENS
+SamSs
+ShellHWDetection
+Spooler
+SysMain
+Themes
+TrkWks
+UserManager
+Wcmsvc
+Winmgmt
+iphlpsvc
+nsi
+) do (sc config %%G start=auto >nul 2>&1)
+echo [1A   %progstep3% Definindo início automático... %reset%
+
+
+
+
 echo    %progstep2% Reduzindo a Telemetria... %reset%
 
-for %%G in ("Office 15 Subscription Heartbeat" OfficeTelemetryAgentFallBack OfficeTelemetryAgentFallBack2016 OfficeTelemetryAgentLogOn OfficeTelemetryAgentLogOn2016) do (schtasks /end /tn "\Microsoft\Office\%%~G" >nul 2>&1 & schtasks /change /tn "\Microsoft\Office\%%~G" /disable >nul 2>&1)
+for %%G in (
+"Office 15 Subscription Heartbeat"
+OfficeTelemetryAgentFallBack
+OfficeTelemetryAgentFallBack2016
+OfficeTelemetryAgentLogOn
+OfficeTelemetryAgentLogOn2016
+) do (
+	schtasks /end /tn "\Microsoft\Office\%%~G" >nul 2>&1
+	schtasks /change /tn "\Microsoft\Office\%%~G" /disable >nul 2>&1
+)
 
-for %%G in ("AppID\SmartScreenSpecific" "Application Experience\AitAgent" "Application Experience\Microsoft Compatibility Appraiser" "Application Experience\ProgramDataUpdater" "Application Experience\StartupAppTask" "Autochk\Proxy" "CloudExperienceHost\CreateObjectTask" "Customer Experience Improvement Program\BthSQM" "Customer Experience Improvement Program\Consolidator" "Customer Experience Improvement Program\KernelCeipTask" "Customer Experience Improvement Program\Uploader" "Customer Experience Improvement Program\UsbCeip" "DiskDiagnostic\Microsoft-Windows-DiskDiagnosticDataCollector" "DiskDiagnostic\Microsoft-Windows-DiskDiagnosticResolver" "DiskFootprint\Diagnostics" "FileHistory\File History (maintenance mode)" "Maintenance\WinSAT" "NetTrace\GatherNetworkInfo" "PI\Sqm-Tasks" "Power Efficiency Diagnostics\AnalyzeSystem" "Shell\FamilySafetyMonitor" "Shell\FamilySafetyRefresh" "Shell\FamilySafetyUpload" "Windows Error Reporting\QueueReporting" "WindowsUpdate\Automatic App Update") do (schtasks /end /tn "\Microsoft\Windows\%%~G" >nul 2>&1 & schtasks /change /tn "\Microsoft\Windows\%%~G" /disable >nul 2>&1)
+
+for %%G in (
+"AppID\SmartScreenSpecific"
+"Application Experience\AitAgent"
+"Application Experience\Microsoft Compatibility Appraiser"
+"Application Experience\ProgramDataUpdater"
+"Application Experience\StartupAppTask"
+"Autochk\Proxy"
+"CloudExperienceHost\CreateObjectTask"
+"Customer Experience Improvement Program\BthSQM"
+"Customer Experience Improvement Program\Consolidator"
+"Customer Experience Improvement Program\KernelCeipTask"
+"Customer Experience Improvement Program\Uploader"
+"Customer Experience Improvement Program\UsbCeip"
+"DiskDiagnostic\Microsoft-Windows-DiskDiagnosticDataCollector"
+"DiskDiagnostic\Microsoft-Windows-DiskDiagnosticResolver"
+"DiskFootprint\Diagnostics"
+"FileHistory\File History (maintenance mode)"
+"Maintenance\WinSAT"
+"NetTrace\GatherNetworkInfo"
+"PI\Sqm-Tasks"
+"Power Efficiency Diagnostics\AnalyzeSystem"
+"Shell\FamilySafetyMonitor"
+"Shell\FamilySafetyRefresh"
+"Shell\FamilySafetyUpload"
+"Windows Error Reporting\QueueReporting"
+"WindowsUpdate\Automatic App Update"
+) do (
+	schtasks /end /tn "\Microsoft\Windows\%%~G" >nul 2>&1
+	schtasks /change /tn "\Microsoft\Windows\%%~G" /disable >nul 2>&1
+)
 
 echo [1A   %progstep3% Reduzindo a Telemetria... %reset%
 echo:
@@ -738,6 +968,13 @@ if %winconfg_info%==3 goto w11menu
 if %winconfg_info%==9 start https://github.com/ru-bem/W11bALF?tab=readme-ov-file#--telas-de-informa%%C3%%A7%%C3%%A3o & goto winconfg_info
 msg * Esta não é uma opção válida. & goto winconfg_info
 
+
+
+
+
+::::
+:: Isso aqui precisa ser reescrito. Funciona, mas olha a bagunça!
+::
 :winconfg
 echo    Fazendo alguns ajustes no Windows...
 for %%G in (AllowAutoGameMode AutoGameModeEnabled) do (reg add HKCU\Software\Microsoft\GameBar /v %%G /t REG_DWORD /d 1 /f >nul 2>&1)
@@ -779,16 +1016,15 @@ goto:eof
 ::
 
 :limpezao_info
-::call :drive_type check
 if %info%==0 goto limpezao
 %limpezao%
 echo:
 echo    %grn01%Esta é a atividade de limpeza do sistema.
-echo    Remove arquivos temporários e cache de alguns programas
-echo    Pode te ajudar a recuperar algum espaço em disco.
+echo    Remove arquivos temporários e cache de programas e jogos.
+echo    Será útil para recuperar espaço de armazenamento.
 echo:
-echo    %reset%ISSO NÃO DELETA COOKIES mas pode te deslogar de alguns
-echo    sites no Microsoft Edge.
+echo    %reset%Nos navegadores, deleta apenas o CACHE, por tanto,
+echo    não te deslogará de nenhum site.
 echo:
 %middleline%%cin02%
 echo    Digite [9] para saber como desativar telas
@@ -796,131 +1032,294 @@ echo    informativas antes do início das atividades.
 %middleline%
 echo:
 echo:
-echo    [1] Iniciar a limpeza normal do sistema %cin02%^| Padrão%reset%
-echo    [2] Iniciar a limpeza profunda do sistema %cin02%^| Mais lenta%reset%
-echo    [3] Mais detalhes %cin02%(abre a página do projeto)%reset%
-echo    [4] Voltar ao menu
+echo    [1] Iniciar a limpeza do sistema
+echo    [2] Mais detalhes %cin02%(abre a página do projeto)%reset%
+echo    [3] Voltar ao menu
 echo:
 echo:
 set /p limpezao_info=---[
 if %limpezao_info%==1 cls & %limpezao% & goto limpezao
-if %limpezao_info%==2 set deepclean=1 & cls & %limpbrut% & echo: & if not %sysdrvtype%==HDD (goto limpezao) else (goto limpbrut_hdd)
-if %limpezao_info%==3 start https://github.com/ru-bem/W11bALF & goto limpezao_info
-if %limpezao_info%==4 goto w11menu
+if %limpezao_info%==2 start https://github.com/ru-bem/W11bALF & goto limpezao_info
+if %limpezao_info%==3 goto w11menu
 if %limpezao_info%==9 start https://github.com/ru-bem/W11bALF?tab=readme-ov-file#--telas-de-informa%%C3%%A7%%C3%%A3o & goto limpezao_info
 msg * Esta não é uma opção válida. & goto limpezao_info
 
 
-:limpbrut_hdd
-%limpbrut%
-echo:
-echo    Quer realmente iniciar uma limpeza profunda em um %red01%HD%reset%?
-echo:
-echo    Isso não é recomendado por que, em um HD
-echo    esse processo pode levar %red01%horas%reset%.
-echo:
-echo    %red11%[1] SIM %reset%- Estou ciente e quero continuar.
-echo    %grn11%[2] NÃO %reset%- Quero voltar ao menu de limpeza.
-echo:
-set /p limpbrut_hdd_choice=---[
-if %limpbrut_hdd_choice%==1 cls & %limpbrut% & goto limpezao
-if %limpbrut_hdd_choice%==2 goto limpezao_info
-msg * Esta não é uma opção válida. & goto limpbrut_hdd
-
-
 :limpezao
-set /a "prog_total=0"
-set /a "prog_etapa=0"
-set "barsize=47"
-
 set progstep1=░[90m
-set progstep2=█
+set progstep2=[97m█
 set progstep3=%grn01%█
 
+echo    %grn01%A limpeza começou^^! %reset%
+echo    Tempo estimado: %grn01%NVME = 16s~ %cin01%^|%grn01% SSD = 48s~ %cin01%^|%red01% HDD = 2m~ %reset%
+
 echo:
-echo    %progstep1% Cache do Microsoft Edge
-echo    %progstep1% Cache de alguns outros programas
-echo    %progstep1% Pastas de Drivers não usados
-echo    %progstep1% .tmp .log .chk .old .bak .dmp
+echo ────────────────────────────────────────────────────────────
+echo:
 
-echo [4A   %progstep2% Cache do Microsoft Edge
+echo:
+echo    %progstep1% Logs do Windows
+echo    %progstep1% Esvaziando a lixeira
+echo    %progstep1% Cache dos navegadores
+echo    %progstep1% Cache e logs da NVIDIA
+echo    %progstep1% Limpando pastas temporarias
+echo    %progstep1% Cache do MSOutlook (WebApp) e OneDrive
+echo:
+echo ────────────────────────────────────────────────────────────
+echo:
+echo    %progstep1% Cache da Steam
+echo    %progstep1% Cache do CapCut
+echo    %progstep1% Cache do Spotify
+echo    %progstep1% Cache do WhatsApp
+echo    %progstep1% Cache da Epic Games
+echo    %progstep1% Cache do pip (Python)
+echo:
+echo ────────────────────────────────────────────────────────────
+echo:
+echo    %progstep1% Logs do Fortnite
+echo    %progstep1% Cache e Logs do Roblox
+
+pause
+::────────────────────────────────────────────────────────────
+::────────────────────────────────────────────────────────────
+
+echo [20A   %progstep2% Logs do Windows
+
+del /f /s /q "%WinDir%\setupact.log" >nul 2>&1
+del /f /s /q "%WinDir%\Logs\cbs\*.log" >nul 2>&1
+
+attrib -s "%WinDir%\logs\measuredboot\*.*" >nul 2>&1
+del /f /s /q "%WinDir%\logs\measuredboot\*.log" >nul 2>&1
+
+attrib -h -s "%WinDir%\ServiceProfiles\LocalService\" >nul 2>&1
+attrib -h -s "%WinDir%\ServiceProfiles\NetworkService\" >nul 2>&1
+del /f /s /q "%WinDir%\ServiceProfiles\LocalService\AppData\Local\Temp\MpCmdRun.log" >nul 2>&1
+del /f /s /q "%WinDir%\ServiceProfiles\NetworkService\AppData\Local\Temp\MpCmdRun.log" >nul 2>&1
+attrib +h +s "%WinDir%\ServiceProfiles\LocalService\" >nul 2>&1
+attrib +h +s "%WinDir%\ServiceProfiles\NetworkService\" >nul 2>&1
+
+del /f /s /q "%LocalAppData%\Microsoft\*.log" >nul 2>&1
+
+del /f /s /q "%WinDir%\inf\*.log" >nul 2>&1
+del /f /s /q "%WinDir%\logs\*.log" >nul 2>&1
+del /f /s /q "%WinDir%\Panther\*.log" >nul 2>&1
+del /f /s /q "%WinDir%\Logs\MoSetup\*.log" >nul 2>&1
+del /f /s /q "%WinDir%\Microsoft.NET\*.log" >nul 2>&1
+del /f /s /q "%WinDir%\Logs\MeasuredBoot\*.log" >nul 2>&1
+del /f /s /q "%WinDir%\SoftwareDistribution\*.log" >nul 2>&1
+del /f /s /q "%WinDir%\Performance\WinSAT\winsat.log" >nul 2>&1
+
+del /f /s /q "%ProgramData%\Microsoft\Windows Defender\Support\*.log" >nul 2>&1
+
+del /f /s /q "%LocalAppData%\CrashDumps\*.dmp" >nul 2>&1
+
+echo [1A   %progstep3% Logs do Windows%reset%
+
+::────────────────────────────────────────────────────────────
+::────────────────────────────────────────────────────────────
+
+echo    %progstep2% Esvaziando a lixeira
+
+del /f /s /q "C:\$recycle.bin\*.*" >nul 2>&1
+
+echo [1A   %progstep3% Esvaziando a lixeira%reset%
+
+::────────────────────────────────────────────────────────────
+::────────────────────────────────────────────────────────────
+
+echo    %progstep2% Cache dos navegadores
+
+taskkill /f /im "brave.exe" >nul 2>&1
+taskkill /f /im "opera.exe" >nul 2>&1
 taskkill /f /im "msedge.exe" >nul 2>&1
-del /f /s /q "%localappdata%\Microsoft\Edge\User Data\*.log" >nul 2>&1
-del /f /s /q "%localappdata%\Microsoft\Edge\User Data\*.dmp" >nul 2>&1
-rd /s /q "%localappdata%\Microsoft\Edge\User Data\Default\Cache\Cache_Data\data_*." >nul 2>&1
-for /l %%G in (1,1,10) do (del /f /s /q "%localappdata%\Microsoft\Edge\User Data\Profile %%G\Cache\Cache_Data\data_*." >nul 2>&1)
-for /l %%G in (1,1,10) do (del /f /s /q "%localappdata%\Microsoft\Edge\User Data\Profile %%G\Cache\Cache_Data\f_*." >nul 2>&1)
-for /l %%G in (1,1,10) do (del /f /s /q "%localappdata%\Microsoft\Edge\User Data\Profile %%G\Service Worker\CacheStorage\*.*" >nul 2>&1)
-echo [1A   %progstep3% Cache do Microsoft Edge%reset%
-::
-echo    %progstep2% Cache de alguns outros programas
-::Capcut
-taskkill /f /im "capcut.exe" >nul 2>&1
-rd /s /q "%localappdata%\CapCut\User Data\Cache" >nul 2>&1
-::OneDrive
-taskkill /f /im "onedrive.exe" >nul 2>&1
-del /f /s /q "%localappdata%\Microsoft\OneDrive\*.odl" >nul 2>&1
-del /f /s /q "%localappdata%\Microsoft\OneDrive\*.aodl" >nul 2>&1
-del /f /s /q "%localappdata%\Microsoft\OneDrive\*.otc" >nul 2>&1
-del /f /s /q "%localappdata%\Microsoft\OneDrive\*.qmlc" >nul 2>&1
+taskkill /f /im "vivaldi.exe" >nul 2>&1
 
-::MSOffice
+del /f /s /q "%LocalAppData%\Vivaldi\User Data\Default\Cache\Cache_Data\*.*" >nul 2>&1
+del /f /s /q "%LocalAppData%\Vivaldi\User Data\Default\Cache\Service Worker\CacheStorage\*.*" >nul 2>&1
+for /l %%G in (1,1,10) do (del /f /s /q "%LocalAppData%\Vivaldi\User Data\Profile %%G\Cache\Cache_Data\*.*" >nul 2>&1)
 
-::Spotify
+del /f /s /q "%LocalAppData%\Google\Chrome\User Data\Default\Cache\Cache_Data\*.*" >nul 2>&1
+del /f /s /q "%LocalAppData%\Google\Chrome\User Data\Default\Service Worker\CacheStorage\*.*" >nul 2>&1
+for /l %%G in (1,1,10) do (del /f /s /q "%LocalAppData%\Google\Chrome\User Data\Profile %%G\Cache\Cache_Data\*.*" >nul 2>&1)
+
+del /f /s /q "%LocalAppData%\BraveSoftware\Brave-Browser\User Data\Default\Cache\Cache_Data\*.*" >nul 2>&1
+del /f /s /q "%LocalAppData%\BraveSoftware\Brave-Browser\User Data\Default\Service Worker\CacheStorage\*.*" >nul 2>&1
+for /l %%G in (1,1,10) do (del /f /s /q "%LocalAppData%\BraveSoftware\Brave-Browser\User Data\Profile %%G\Cache\Cache_Data\*.*" >nul 2>&1)
+
+del /f /s /q "%LocalAppData%\Microsoft\Edge\User Data\Default\Cache\Cache_Data\*.*" >nul 2>&1
+del /f /s /q "%LocalAppData%\Microsoft\Edge\User Data\Default\Service Worker\CacheStorage\*.*" >nul 2>&1
+for /l %%G in (1,1,10) do (del /f /s /q "%LocalAppData%\Microsoft\Edge\User Data\Profile %%G\Cache\Cache_Data\*.*" >nul 2>&1)
+
+:: Não use o Opera ;)
+del /f /s /q "%LocalAppData%\Opera Software\Opera Stable\User Data\Default\Cache\Cache_Data\*.*" >nul 2>&1
+del /f /s /q "%LocalAppData%\Opera Software\Opera Stable\User Data\Default\Service Worker\CacheStorage\*.*" >nul 2>&1
+for /l %%G in (1,1,10) do (del /f /s /q "%LocalAppData%\Opera Software\Opera Stable\User Data\Profile %%G\Cache\Cache_Data\*.*" >nul 2>&1)
+
+del /f /s /q "%LocalAppData%\Opera Software\Opera GX Stable\User Data\Default\Cache\Cache_Data\*.*" >nul 2>&1
+del /f /s /q "%LocalAppData%\Opera Software\Opera GX Stable\User Data\Default\Service Worker\CacheStorage\*.*" >nul 2>&1
+for /l %%G in (1,1,10) do (del /f /s /q "%LocalAppData%\Opera GX Software\Opera Stable\User Data\Profile %%G\Cache\Cache_Data\*.*" >nul 2>&1)
+
+echo [1A   %progstep3% Cache dos navegadores%reset%
+
+::────────────────────────────────────────────────────────────
+::────────────────────────────────────────────────────────────
+
+echo    %progstep2% Cache e logs da NVIDIA
+
+del /f /s /q "%ProgramData%\NVIDIA Corporation\NVIDIA App\Logs\*.*" >nul 2>&1
+del /f /s /q "%ProgramData%\NVIDIA Corporation\NVIDIA App\Installer\Logs\*.*" >nul 2>&1
+del /f /s /q "%LocalAppData%\NVIDIA\DXCache\*.*" >nul 2>&1
+
+echo [1A   %progstep3% Cache e logs da NVIDIA%reset%
+
+::────────────────────────────────────────────────────────────
+::────────────────────────────────────────────────────────────
+
+echo    %progstep2% Limpando pastas temporarias
+
+del /f /q /s "%temp%\*.*" >nul 2>&1
+del /f /q /s "%windir%\temp\*.*" >nul 2>&1
+
+echo [1A   %progstep3% Limpando pastas temporarias%reset%
+
+::────────────────────────────────────────────────────────────
+::────────────────────────────────────────────────────────────
+
+echo    %progstep2% Cache do MSOutlook (WebApp) e OneDrive
+
+del /f /s /q "%LocalAppData%\OneDrive\*.qmlc" >nul 2>&1
+del /f /s /q "%LocalAppData%\Microsoft\OneDrive\*.otc" >nul 2>&1
+del /f /s /q "%LocalAppData%\Microsoft\OneDrive\*.odl" >nul 2>&1
+del /f /s /q "%LocalAppData%\Microsoft\OneDrive\*.aodl" >nul 2>&1
+del /f /s /q "%LocalAppData%\Microsoft\OneDrive\setup\logs\*.log" >nul 2>&1
+del /f /s /q "%LocalAppData%\Microsoft\Olk\EBWebView\Default\Cache\Cache_Data\*.*" >nul 2>&1
+del /f /s /q "%LocalAppData%\Microsoft\Olk\EBWebView\Default\Service Worker\CacheStorage\*.*" >nul 2>&1
+
+echo [1A   %progstep3% Cache do MSOutlook (WebApp) e OneDrive%reset%
+
+
+echo:
+echo ────────────────────────────────────────────────────────────
+echo:
+
+
+echo    %progstep2% Cache da Steam
+
+del /f /s /q "%LocalAppData%\Steam\htmlcache\Default\Cache\Cache_Data\*.*" >nul 2>&1
+
+echo [1A   %progstep3% Cache da Steam%reset%
+
+::────────────────────────────────────────────────────────────
+::────────────────────────────────────────────────────────────
+
+echo    %progstep2% Cache do CapCut
+
+del /f /s /q "%LocalAppData%\CapCut\User Data\CEF\Cache\Cache\Cache_Data\*.*" >nul 2>&1
+:: del /f /s /q "%localappdata%\CapCut\User Data\Cache\*.*" >nul 2>&1 (É melhor fazer isso pelo próprio CapCut)
+
+echo [1A   %progstep3% Cache do CapCut%reset%
+
+::────────────────────────────────────────────────────────────
+::────────────────────────────────────────────────────────────
+
+echo    %progstep2% Cache do Spotify
+
 taskkill /f /im "spotify.exe" >nul 2>&1
-del /f /s /q %localappdata%\Spotify\*.log >nul 2>&1
-del /f /s /q %localappdata%\Spotify\*.pma >nul 2>&1
-del /f /s /q %localappdata%\Spotify\data_*. >nul 2>&1
-del /f /s /q %localappdata%\Spotify\f_*. >nul 2>&1
-del /f /s /q %localappdata%\Spotify\Data\*.file >nul 2>&1
-del /f /s /q %localappdata%\Spotify\Default\Cache\Cache_Data >nul 2>&1
-::Adobe...
-del /f /s /q "%appdata%\Adobe\Common\Media Cache files\*.*">nul 2>&1
-echo [1A   %progstep3% Cache de alguns outros programas%reset%
+rd /s /q "%localappdata%\Spotify\Data" >nul 2>&1
+del /f /s /q "%LocalAppData%\Spotify\*.log" >nul 2>&1
+del /f /s /q "%LocalAppData%\Spotify\Default\Cache\Cache_Data\*.*" >nul 2>&1
+del /f /s /q "%LocalAppData%\Spotify\Browser\Cache\Cache_Data\*.*" >nul 2>&1
 
-echo    %progstep2% Pastas de Drivers não usados
+echo [1A   %progstep3% Cache do Spotify%reset%
+
+::────────────────────────────────────────────────────────────
+::────────────────────────────────────────────────────────────
+
+echo    %progstep2% Cache do WhatsApp
+
+del /f /s /q "%LocalAppData%\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\Cache\Cache_Data\*.*" >nul 2>&1
+del /f /s /q "%LocalAppData%\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\Service Worker\CacheStorage\*.*" >nul 2>&1
+del /f /s /q "%LocalAppData%\Packages\5319275A.51895FA4EA97F_cv1g1gvanyjgm\LocalCache\EBWebView\Default\Cache\Cache_Data\*.*" >nul 2>&1
+
+echo [1A   %progstep3% Cache do WhatsApp%reset%
+
+::────────────────────────────────────────────────────────────
+::────────────────────────────────────────────────────────────
+
+echo    %progstep2% Cache da Epic Games
+
+del /f /s /q "%LocalAppData%\EpicGamesLauncher\Saved\webcache_4430\Service Worker\CacheStorage\*.*" >nul 2>&1
+del /f /s /q "%LocalAppData%\EpicGamesLauncher\Saved\webcache_4430\Cache\*.*" >nul 2>&1
+del /f /s /q "%LocalAppData%\Epic Games\EOSOverlay\BrowserCache\0\Default\Cache\Cache_Data\*.*" >nul 2>&1
+
+echo [1A   %progstep3% Cache da Epic Games%reset%
+
+::────────────────────────────────────────────────────────────
+::────────────────────────────────────────────────────────────
+
+echo    %progstep2% Cache do pip (Python)
+
+del /f /s /q "%LocalAppData%\pip\cache\*.*" >nul 2>&1
+
+echo [1A   %progstep3% Cache do pip (Python)%reset%
+
+
+echo:
+echo ────────────────────────────────────────────────────────────
+echo:
+
+
+echo    %progstep2% Logs do Fortnite
+
+del /f /s /q "%LocalAppData%\FortniteGame\Saved\Logs\*.*" >nul 2>&1
+
+echo [1A   %progstep3% Logs do Fortnite%reset%
+
+::────────────────────────────────────────────────────────────
+::────────────────────────────────────────────────────────────
+
+echo    %progstep2% Cache e Logs do Roblox
+
+del /f /s /q "%LocalAppData%\Roblox\Downloads\roblox-player\*.*" >nul 2>&1
+del /f /s /q "%LocalAppData%\Roblox\rbx-storage\*.*" >nul 2>&1
+del /f /s /q "%LocalAppData%\Roblox\logs\crashes\reports\*.*" >nul 2>&1
+del /f /s /q "%LocalAppData%\Roblox\rbx-storage.db" >nul 2>&1
+
+echo [1A   %progstep3% Cache e Logs do Roblox%reset%
+
+
+echo:
+echo ────────────────────────────────────────────────────────────
+echo:
+
+if %limpeza_plus%==1 goto limpeza_plus
+goto:eof
+
+::────────────────────────────────────────────────────────────
+::────────────────────────────────────────────────────────────
+
+:limpeza_plus
+echo   %progstep2% Cache da Adobe...
+
+del /f /s /q "%AppData%\Adobe\Common\Media Cache files\*.*" >nul 2>&1
+
+echo [1A   %progstep3% Cache da Adobe... %reset%
+
+::────────────────────────────────────────────────────────────
+::────────────────────────────────────────────────────────────
+
+echo   %progstep2% Instaladores de drivers já instalados...
+
 rd /s /q %SYSTEMDRIVE%\AMD >nul 2>&1
 rd /s /q %SYSTEMDRIVE%\NVIDIA >nul 2>&1
 rd /s /q %SYSTEMDRIVE%\INTEL >nul 2>&1
-echo [1A   %progstep3% Pastas de Drivers não usados%reset%
 
-del /f /s /q %LocalAppData%\Microsoft\Windows\Explorer\*.* >nul 2>&1
-del /f /s /q %systemdrive%\$Recycle.Bin\*.* >nul 2>&1
-del /f /s /q %temp%\*.* >nul 2>&1
-del /f /s /q %windir%\temp\*.* >nul 2>&1
-del /f /s /q %ProgramData%\Microsoft\Windows Defender\Support\*.* >nul 2>&1
+echo [1A   %progstep3% Instaladores de drivers já instalados... %reset%
 
-set "winclean=%WinDir%"
-if %deepclean%==1 (set "winclean=%SystemDrive%")
-
-echo    %progstep2% Procurando arquivos .tmp que podem ser deletados 1/6
-forfiles /p %winclean%\ /m *.tmp /s /c "cmd /c echo @path" 2>nul >%temp%\limplist.txt
-echo [1A   %progstep2% Procurando arquivos .log que podem ser deletados 2/6
-forfiles /p %winclean%\ /m *.log /s /c "cmd /c echo @path" 2>nul >>%temp%\limplist.txt
-echo [1A   %progstep2% Procurando arquivos .chk que podem ser deletados 3/6
-forfiles /p %winclean%\ /m *.chk /s /c "cmd /c echo @path" 2>nul >>%temp%\limplist.txt
-echo [1A   %progstep2% Procurando arquivos .old que podem ser deletados 4/6
-forfiles /p %winclean%\ /m *.old /s /c "cmd /c echo @path" 2>nul >>%temp%\limplist.txt
-echo [1A   %progstep2% Procurando arquivos .bak que podem ser deletados 5/6
-forfiles /p %winclean%\ /m *.bak /s /c "cmd /c echo @path" 2>nul >>%temp%\limplist.txt
-echo [1A   %progstep2% Procurando arquivos .dmp que podem ser deletados 6/6
-forfiles /p %winclean%\ /m *.dmp /s /c "cmd /c echo @path" 2>nul >>%temp%\limplist.txt
-for /f %%G in ('findstr /r /c:"." %temp%\limplist.txt ^| find /c "."') do set /a prog_total+=%%G
-echo [1A   %progstep2% Deletando arquivos .tmp .log .chk .old .bak .dmp    
 echo:
-for /f %%G in ('findstr /r /c:"." %temp%\limplist.txt') do (
-	del /f /s /q %%~G >nul 2>&1
-	set /a prog_etapa+=1
-	set /a "porcentagem=(!prog_etapa!*100)/%prog_total%"
-	set /a "barras=(!porcentagem!*%barsize%)/100"
-	set "barrap="
-	for /L %%i in (1 1 !barras!) do set "barrap=!barrap!█"
-	echo [1A   %cin03%█!barrap![m%cin13% !porcentagem!%% [m)
-echo [2A   %progstep3% Arquivos .tmp .log .chk .old .bak .dmp deletados%reset%
-echo    %grn01%█!barrap![m%grn12% !porcentagem!%% [m
-del /f /s /q %temp%\limplist.txt >nul 2>&1
-%underline%
+echo ────────────────────────────────────────────────────────────
 echo:
+
 goto:eof
 
 ::
