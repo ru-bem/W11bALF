@@ -11,7 +11,7 @@ O **Windows 11 but A Little Faster** é um pequeno programa escrito em [**Batch*
 ---
 
 # ❔ O que o W11bALF pode fazer?
-**Atualmente, o programa se encontra na versão [v1.3.1](https://github.com/rubem-psd/W11bALF/releases/latest) e é capaz de automatizar os seguintes processos:**
+**Atualmente, o programa se encontra na versão [v1.4.0](https://github.com/rubem-psd/W11bALF/releases/latest) e é capaz de automatizar os seguintes processos:**
 
 - **[Serviços]** Alterar o modo de inicialização de alguns serviços do windows.
 - **[Telemetria]** Reduzir a coleta de dados de uso pela Microsoft.
@@ -33,12 +33,12 @@ E mais! (Extras)
 
 ---
 
-**[⬇️ Clique aqui para fazer o download da versão mais recente do script ⬇️](https://github.com/ru-bem/W11bALF/releases/latest/download/W11bALF_v1.3.1.cmd)**
+**[⬇️ Clique aqui para fazer o download da versão mais recente do script ⬇️](https://github.com/ru-bem/W11bALF/releases/latest/download/W11bALF_v1.4.0.cmd)**
 
 ---
 
 # 🔎 Configurações
-As configurações do programa estão armazenadas entre as linhas 7 e 69 do código, e podem ser personalizadas de acordo com o seu uso.
+As configurações do programa estão armazenadas entre as linhas 7 e 67 do código, e podem ser personalizadas de acordo com o seu uso.
 
 ### - bALFmode (Modo automático)
 O **Modo bALF** é o modo automático do script. Ele pode ser ativado editando a **linha 19** do código, alterando o valor de `balfmode` entre 0, 1 e 2.
@@ -57,26 +57,18 @@ Pode ser ativado ou desativado alterando o valor de `silent` na linha 32 do cód
 - `silent=1` - Executará todos os processos automáticos exibindo apenas o nome da tarefa que está sendo realizada no momento, sem nenhum detalhe adicional.
 Funcionará apenas em conjunto com o modo bALF.
 
-### - DeepClean
-A limpeza profunda pode ser ativada alterando o valor de `deepclean` na linha 38 do código.
-- `deepclean=0` - Valor padrão. A função de limpeza do sistema procurará por arquivos de determinadas extensões apenas na pasta C:\Windows.
-- `deepclean=1` - A função de limpeza do sistema procurará por arquivos de determinadas extensões em **toda a unidade** onde o Windows está instalado. (Pode levar vários minutos dependendo do seu computador)
-
-### - Configuração do Microsoft Edge (EXPERIMENTAL)
-A escolha dos presets de configuração do Microsft Edge pode ser feita alterando o valor de `medgetipo` na linha 46 do código.
-- `medgetipo=1` - Valor padrão. Aplicará o preset básico no Microsoft Edge.
-- `medgetipo=2` - Aplicará o preset seguro no Microsoft Edge.
-- `medgetipo=3` - Aplicará o preset hardened no Microsoft Edge.
-
-_Por enquanto, é recomendado usar essa atividade apenas em novas instalações do Windows ou em máquinas virtuais para teste._
+### - Limpeza+
+A limpeza plus pode ser ativada alterando o valor de `limpeza_plus` na linha 38 do código.
+- `limpeza_plus=0` - Valor padrão.
+- `limpeza_plus=1` - Serão adicionados alguns arquivos e pastas extras para a limpeza.
 
 ### - Telas de informação
-A exibição ou não das telas de informação pode ser definida alterando o valor de `info` na linha 53 do código.
+A exibição ou não das telas de informação pode ser definida alterando o valor de `info` na linha 54 do código.
 - `info=1` - Valor padrão. Exibe informações sobre cada uma das atividades antes de executá-las.
 - `info=2` - Inicia diretamente as atividades ao serem escolhidas.
 
 ### - Desinstalação de Bloatware
-Ao fim do processo de desinstalação padrão de bloatware duas desinstalações opcionais serão iniciadas. Você pode escolher se deseja remover esses aplicativos ou não. (A partir da linha 62).
+Ao fim do processo de desinstalação padrão de bloatware duas desinstalações opcionais serão iniciadas. Você pode escolher se deseja remover esses aplicativos ou não. (A partir da linha 63).
 - 0 = Não desinstalar
 - 1 = Desinstalar
 - `delapp1=1` - Desinstalar o OneDrive
@@ -114,13 +106,12 @@ Ao fim do processo de desinstalação padrão de bloatware duas desinstalações
 # ⏳ Futuro
 
 - Cada função do W11bALF poderá ser usada separadamente com os arquivos de execução isolada. É como uma versão "Super ultra mega lite" de um programa que já é muito leve e rápido.
-- O processo de limpeza será melhorado e um nível mais rápido será adicionado para usuários em HDDs.
 - A configuração automática do Microsoft Edge será melhorada.
 - A instalação do Office será automatizada.
 
 ---
 
-**[⬇️ Clique aqui para fazer o download da versão mais recente do script ⬇️](https://github.com/ru-bem/W11bALF/releases/latest/download/W11bALF_v1.3.1.cmd)**
+**[⬇️ Clique aqui para fazer o download da versão mais recente do script ⬇️](https://github.com/ru-bem/W11bALF/releases/latest/download/W11bALF_v1.4.0.cmd)**
 
 ---
 Se puder, contribua com o projeto: [livepix.gg/rubem](https://livepix.gg/rubem)
