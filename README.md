@@ -19,7 +19,6 @@ O **Windows 11 but A Little Faster** é um pequeno programa escrito em [**Batch*
 - **[Limpeza]** Fazer uma limpeza completa em toda partição onde o sistema está instalado.
 - **[WinSxS]** Limpar a pasta WinSxS, o que pode ajudar a liberar bastante espaço em disco.
 - **[Menu e Taskbar]** Desfixar todos os ícones do menu iniciar e da barra de tarefas.
-- **[Microsoft Edge]** Configurar o Edge com presets diversos (Experimental).
 - **[Hibernação]** Ajustar a hibernação para HDDs, SSDs e NVMEs.
 - **[Ativação]** Ativar o Windows 11.
 - **[LTSC]** Instalar a Microsoft Store nas versões LTSC do W11.
@@ -82,7 +81,6 @@ Ao fim do processo de desinstalação padrão de bloatware duas desinstalações
 - [Lista de programas desinstalados](https://github.com/rubem-psd/W11bALF/blob/main/Recursos/Mais_Informa%C3%A7%C3%B5es/Lista_de_programas_desinstalados.md)
 - [Sobre a alteração de configurações](https://github.com/rubem-psd/W11bALF/blob/main/Recursos/Mais_Informa%C3%A7%C3%B5es/Sobre_a_altera%C3%A7%C3%A3o_de_configura%C3%A7%C3%B5es.md)
 - [Lista de limpeza](https://github.com/rubem-psd/W11bALF/blob/main/Recursos/Mais_Informa%C3%A7%C3%B5es/Lista_de_limpeza.md)
-- [Presets do Microsoft Edge](https://github.com/rubem-psd/W11bALF/blob/main/Recursos/Mais_Informa%C3%A7%C3%B5es/Presets_de_configura%C3%A7%C3%A3o_do_Edge.md)
 - [Configurações de hibernação](https://github.com/rubem-psd/W11bALF/blob/main/Recursos/Mais_Informa%C3%A7%C3%B5es/Configura%C3%A7%C3%A3o_de_hiberna%C3%A7%C3%A3o.md)
 - [Limpeza da pasta WinSxS](https://github.com/rubem-psd/W11bALF/blob/main/Recursos/Mais_Informa%C3%A7%C3%B5es/Limpeza_da_pasta_WinSxS.md)
 - [Ativação do Windows 11](https://github.com/rubem-psd/W11bALF/blob/main/Recursos/Mais_Informa%C3%A7%C3%B5es/Ativa%C3%A7%C3%A3o_do_W11.md)
