@@ -16,16 +16,18 @@ O **Windows 11 but A Little Faster** é um pequeno programa escrito em [**Batch*
 
 - **[Serviços]** Alterar o modo de inicialização de alguns serviços do windows.
 - **[Telemetria]** Reduzir a coleta de dados de uso pela Microsoft.
-- **[Bloatwares]** Desinstalar dezenas de aplicativos instalados pela Microsoft sem o seu pedido.
+- **[Bloatwares]** Desinstalar dezenas de aplicativos pré-instalados.
 - **[Limpeza]** Fazer uma limpeza completa em toda partição onde o sistema está instalado.
 - **[WinSxS]** Limpar a pasta WinSxS, o que pode ajudar a liberar bastante espaço em disco.
 - **[Menu e Taskbar]** Desfixar todos os ícones do menu iniciar e da barra de tarefas.
 - **[Hibernação]** Ajustar a hibernação para HDDs, SSDs e NVMEs.
 - **[Ativação]** Ativar o Windows 11.
+- **[Office]** Instalar automaticamente o [OnlyOffice](https://www.onlyoffice.com/) sem interação do usuário. [O365](https://www.office.com/) em breve!
 - **[LTSC]** Instalar a Microsoft Store nas versões LTSC do W11.
 - **[LTSC]** Instalar o Winget nas versões LTSC do W11.
 
 E mais! (Extras)
+- Instalar codecs oficiais da Microsoft.
 - Desativar ou ativar o Microsoft Copilot.
 - Alternar facilmente entre o Menu de Contexto Clássico e o Moderno.
 - Ocultar ou exibir o "Início" e a "Galeria" do explorador de arquivos.
@@ -33,7 +35,7 @@ E mais! (Extras)
 
 ---
 
-**[⬇️ Clique aqui para fazer o download da versão mais recente do script ⬇️](https://github.com/ru-bem/W11bALF/releases/latest/download/W11bALF_v1.4.0.cmd)**
+**[⬇️ Clique aqui para fazer o download da versão mais recente do script ⬇️](https://github.com/ru-bem/W11bALF/releases/latest/download/W11bALF_v1.5.0.cmd)**
 
 ---
 
@@ -110,14 +112,14 @@ Ao fim do processo de desinstalação padrão de bloatware duas desinstalações
 
 ---
 
-**[⬇️ Clique aqui para fazer o download da versão mais recente do script ⬇️](https://github.com/ru-bem/W11bALF/releases/latest/download/W11bALF_v1.4.0.cmd)**
+**[⬇️ Clique aqui para fazer o download da versão mais recente do script ⬇️](https://github.com/ru-bem/W11bALF/releases/latest/download/W11bALF_v1.5.0.cmd)**
 
 ---
 Se puder, contribua com o projeto: [livepix.gg/rubem](https://livepix.gg/rubem)
 
 Para relatar bugs, enviar sugestões ou fazer perguntas use a aba [issues](https://github.com/ru-bem/W11bALF/issues) na página principal. Por favor, use a label correspondente ao tipo de mensagem.
 
-Você também pode falar diretamente comigo atráves do [Discord](https://discord.com/users/196300526139342848).
+Você também pode falar diretamente comigo atráves do [Discord](https://discord.com/users/196300526139342848) - eon.inf
 
 ---
 ##### W11bALF - Windows 11 but A Little Faster   |||   Criado com ❤️ por Rubem   |||   Obrigado pelo apoio!
