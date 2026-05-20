@@ -1,7 +1,7 @@
 # W11bALF
 O **Windows 11 but A Little Faster** é um pequeno programa escrito em [**Batch**](https://en.wikipedia.org/wiki/Batch_file) que foi criado com o objetivo de facilitar o processo de configuração pós-instalação do Windows 11, mas também pode ser usado para fazer limpezas periódicas no sistema e realizar alguns ajustes de maneira muito facilitada.
 
-### **[:: ⬇️ Download da versão mais recente ::](https://github.com/ru-bem/W11bALF/releases/latest/download/W11bALF_v1.5.0.cmd)**
+### **[:: ⬇️ Download da versão mais recente ::](https://github.com/ru-bem/W11bALF/releases/latest/download/W11bALF.cmd)**
 
 ---
 ###### < Imagem do MENU PRINCIPAL <⠀⠀⠀ ⠀⠀⠀⠀⠀⠀ ⠀⠀⠀⠀⠀ |||||⠀⠀⠀ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀  > Imagem das OPÇÕES EXTRAS >
@@ -12,7 +12,7 @@ O **Windows 11 but A Little Faster** é um pequeno programa escrito em [**Batch*
 ---
 
 # ❔ O que o W11bALF pode fazer?
-**Atualmente, o programa se encontra na versão [v1.5.0](https://github.com/ru-bem/W11bALF/releases/latest) e é capaz de automatizar os seguintes processos:**
+**Atualmente, o programa é capaz de automatizar os seguintes processos:**
 
 - **[Serviços]** Alterar o modo de inicialização de alguns serviços do windows.
 - **[Telemetria]** Reduzir a coleta de dados de uso pela Microsoft.
@@ -35,7 +35,7 @@ E mais! (Extras)
 
 ---
 
-**[⬇️ Clique aqui para fazer o download da versão mais recente do script ⬇️](https://github.com/ru-bem/W11bALF/releases/latest/download/W11bALF_v1.5.0.cmd)**
+**[⬇️ Clique aqui para fazer o download da versão mais recente do script ⬇️](https://github.com/ru-bem/W11bALF/releases/latest/download/W11bALF.cmd)**
 
 ---
 
@@ -112,7 +112,7 @@ Ao fim do processo de desinstalação padrão de bloatware duas desinstalações
 
 ---
 
-**[⬇️ Clique aqui para fazer o download da versão mais recente do script ⬇️](https://github.com/ru-bem/W11bALF/releases/latest/download/W11bALF_v1.5.0.cmd)**
+**[⬇️ Clique aqui para fazer o download da versão mais recente do script ⬇️](https://github.com/ru-bem/W11bALF/releases/latest/download/W11bALF.cmd)**
 
 ---
 Se puder, contribua com o projeto: [livepix.gg/rubem](https://livepix.gg/rubem)
