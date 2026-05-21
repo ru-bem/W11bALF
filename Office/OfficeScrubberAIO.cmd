@@ -9,6 +9,7 @@ set qerel=
 set _elev=
 set _args=
 set _args=%*
+set _uAll=1&set Unattend=1
 if not defined _args goto :NoProgArgs
 if "%~1"=="" set "_args="&goto :NoProgArgs
 set "_args="
@@ -131,7 +132,7 @@ if defined qerel goto :skipQE
 if %_pwsh% EQU 0 goto :skipQE
 if %xOS%==A64 %_psc% $env:PROCESSOR_ARCHITECTURE 2>nul | find /i "x86" 1>nul && goto :skipQE
 if %winbuild% GEQ 17763 (
-set "launchcmd=start conhost.exe %_psc%"
+set "launchcmd=start /min conhost.exe %_psc%"
 ) else (
 set "launchcmd=%_psc%"
 )
