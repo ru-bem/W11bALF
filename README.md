@@ -1,18 +1,21 @@
 # W11bALF
-O **Windows 11 but A Little Faster** é um pequeno programa escrito em [**Batch**](https://en.wikipedia.org/wiki/Batch_file) que foi criado com o objetivo de facilitar o processo de configuração pós-instalação do Windows 11, mas também pode ser usado para fazer limpezas periódicas no sistema e realizar alguns ajustes de maneira muito facilitada.
 
-### **[:: ⬇️ Download da versão mais recente ::](https://github.com/ru-bem/W11bALF/releases/latest/download/W11bALF.cmd)**
+O **Windows 11 but A Little Faster** é um pequeno programa escrito em batch criado com o objetivo de facilitar o processo de configuração pós-instalação do Windows 11 e várias outras funções auxiliares de maneira automatizada.
+
+**[⬇️ Faça o download da versão mais recente clicando aqui ⬇️](https://github.com/ru-bem/W11bALF/releases/latest/download/W11bALF.cmd)**
 
 ---
+
 ###### < Imagem do MENU PRINCIPAL <⠀⠀⠀ ⠀⠀⠀⠀⠀⠀ ⠀⠀⠀⠀⠀ |||||⠀⠀⠀ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀  > Imagem das OPÇÕES EXTRAS >
-<img height="500" alt="1 4 0_menu" src="https://github.com/user-attachments/assets/14cc2add-58c2-4689-ae0a-d55d40612e4f" /> <img height="500" alt="1 4 0_extras" src="https://github.com/user-attachments/assets/07858970-c225-40a3-88fe-1c6e6a93f691" />
+<img height="500" alt="menu" src="https://github.com/user-attachments/assets/44c821b7-0d60-468d-b093-aa9c3b260fe9" /> <img height="500" alt="extras" src="https://github.com/user-attachments/assets/39fef0d2-fa71-4a5e-b3a2-051d58799281" />
+
 
 
 
 ---
 
 # ❔ O que o W11bALF pode fazer?
-**Atualmente, o programa é capaz de automatizar os seguintes processos:**
+**Atualmente, o W11bALF é capaz de automatizar os seguintes processos:**
 
 - **[Serviços]** Alterar o modo de inicialização de alguns serviços do windows.
 - **[Telemetria]** Reduzir a coleta de dados de uso pela Microsoft.
@@ -35,7 +38,7 @@ E mais! (Extras)
 
 ---
 
-**[⬇️ Clique aqui para fazer o download da versão mais recente do script ⬇️](https://github.com/ru-bem/W11bALF/releases/latest/download/W11bALF.cmd)**
+**[⬇️ Faça o download da versão mais recente clicando aqui ⬇️](https://github.com/ru-bem/W11bALF/releases/latest/download/W11bALF.cmd)**
 
 ---
 
@@ -112,7 +115,7 @@ Ao fim do processo de desinstalação padrão de bloatware duas desinstalações
 
 ---
 
-**[⬇️ Clique aqui para fazer o download da versão mais recente do script ⬇️](https://github.com/ru-bem/W11bALF/releases/latest/download/W11bALF.cmd)**
+**[⬇️ Faça o download da versão mais recente clicando aqui ⬇️](https://github.com/ru-bem/W11bALF/releases/latest/download/W11bALF.cmd)**
 
 ---
 Se puder, contribua com o projeto: [livepix.gg/rubem](https://livepix.gg/rubem)
