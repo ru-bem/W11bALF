@@ -41,7 +41,7 @@ set step3=%fggn%█
 
 :admin :: Requisitar permissões de administrador
 call :w11balf_WHT
-if not "%1"=="am_admin" (echo    Quando solicitado %bgwe% clique em %bggn% "SIM" %bgbk%& chcp 437 >nul & %powershell% "Start-Process -Verb RunAs -FilePath '%0' -ArgumentList 'am_admin'" & chcp 65001 >nul & exit /b)
+if not "%1"=="am_admin" (echo    Quando solicitado %bgwe% clique em %bggn% "SIM" %bgbk%& chcp 437 >nul & %powershell% "Start-Process -Verb RunAs -FilePath '%0' -ArgumentList 'am_admin'" & chcp 65001 >nul & exit)
 
 
 :o365_folders :: Setar os locais que serão usados
