@@ -125,4 +125,4 @@ Para relatar bugs, enviar sugestões ou fazer perguntas use a aba [issues](https
 Você também pode falar diretamente comigo atráves do [Discord](https://discord.com/users/196300526139342848) - eon.inf
 
 ---
-##### W11bALF - Windows 11 but A Little Faster   |||   Criado com ❤️ por Rubem   |||   Obrigado pelo apoio!
+###### W11bALF - Windows 11 but A Little Faster - Criado por Rubem - Obrigado pelo apoio!
