@@ -1268,7 +1268,6 @@ echo:
 echo ────────────────────────────────────────────────────────────
 echo:
 
-echo:
 echo    %progstep1% Logs do Windows
 echo    %progstep1% Esvaziando a lixeira
 echo    %progstep1% Cache dos navegadores
@@ -1295,7 +1294,7 @@ echo    %progstep1% Cache e Logs do Roblox
 ::────────────────────────────────────────────────────────────
 ::────────────────────────────────────────────────────────────
 
-echo [20A   %progstep2% Logs do Windows
+echo [22A   %progstep2% Logs do Windows
 
 del /f /s /q "%WinDir%\setupact.log" >nul 2>&1
 del /f /s /q "%WinDir%\Logs\cbs\*.log" >nul 2>&1
