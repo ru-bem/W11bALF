@@ -1,5 +1,6 @@
 <h3 align="center"><a href="https://github.com/ru-bem/W11bALF"><img src="https://raw.githubusercontent.com/ru-bem/W11bALF/refs/heads/main/Recursos/w11balf.png" width="340px"></a></h3>
 <p align="center">
+  <code>       Windows 11 but a Little Faster       </code><br>
   <a href="https://github.com/ru-bem/W11bALF/releases/latest"><img src="https://img.shields.io/github/v/release/ru-bem/W11bALF?style=flat-square&colorB=008000&label=Vers%C3%A3o%20mais%20recente"></a>
   <a href="https://github.com/ru-bem/W11bALF/releases"><img src="https://img.shields.io/github/downloads/ru-bem/W11bALF/total?style=flat-square&colorB=008000&label=Downloads"></a>
   <a href="https://github.com/ru-bem/W11bALF"><img src="https://img.shields.io/github/stars/ru-bem/W11bALF?style=flat-square&color=008000"></a>
@@ -7,19 +8,18 @@
 
 ---
 
-O **Windows 11 but A Little Faster** é um pequeno programa escrito em batch criado com o objetivo de facilitar o processo de configuração pós-instalação do Windows 11 e várias outras funções auxiliares de maneira automatizada.
 
 <p align="center">
-  <a href="https://github.com/ru-bem/W11bALF/releases/latest/download/W11bALF.cmd"><img src="https://img.shields.io/badge/Clique%20aqui%20para%20baixar%20a%20vers%C3%A3o%20mais%20recente-008000?style=for-the-badge"></a>
+  <a href="https://github.com/ru-bem/W11bALF/releases/latest/download/W11bALF.cmd"><img src="https://img.shields.io/badge/Clique%20aqui%20para%20baixar-008000?style=for-the-badge"></a>
   <a href="https://livepix.gg/rubem"><img src="https://img.shields.io/badge/Contribua%20com%20o%20projeto-DDDDDD?style=for-the-badge"></a>
 </p>
 
-<br>
 <p align="center">
   <img height="500" alt="menu_1 6 2" src="https://github.com/user-attachments/assets/c94b4682-8f25-4ea4-8cdc-60a478aecff1" /> <img height="500" alt="extras_1 6 2" src="https://github.com/user-attachments/assets/701b318c-e602-4a3d-a5e2-ab48b8a7503a" />
 </p>
 
 ---
+
 <br>
 
 # ❔ O que o W11bALF pode fazer?
@@ -124,16 +124,16 @@ Ao fim do processo de desinstalação padrão de bloatware duas desinstalações
 - A configuração automática do Microsoft Edge será melhorada.
 <br>
 
-<p align="center">
-  <a href="https://github.com/ru-bem/W11bALF/releases/latest/download/W11bALF.cmd"><img src="https://img.shields.io/badge/Clique%20aqui%20para%20baixar%20a%20vers%C3%A3o%20mais%20recente-008000?style=for-the-badge"></a>
+---
+
+<p>
+  <a href="https://github.com/ru-bem/W11bALF/releases/latest/download/W11bALF.cmd"><img src="https://img.shields.io/badge/Clique%20aqui%20para%20baixar-008000?style=for-the-badge"></a>
   <a href="https://livepix.gg/rubem"><img src="https://img.shields.io/badge/Contribua%20com%20o%20projeto-DDDDDD?style=for-the-badge"></a>
 </p>
-
 <br>
 
-Para relatar bugs, enviar sugestões ou fazer perguntas use a aba [issues](https://github.com/ru-bem/W11bALF/issues) na página principal. Por favor, use a label correspondente ao tipo de mensagem.
-
-Você também pode falar diretamente comigo atráves do [Discord](https://discord.com/users/196300526139342848) - eon.inf
+> [!TIP]
+> Para relatar bugs, enviar sugestões ou fazer perguntas use a aba [issues](https://github.com/ru-bem/W11bALF/issues) na página principal. Por favor, use a label correspondente ao tipo de mensagem. Você também pode falar diretamente comigo atráves do [Discord](https://discord.com/users/196300526139342848) - eon.inf
 
 ---
 
