@@ -11,15 +11,16 @@ O **Windows 11 but A Little Faster** é um pequeno programa escrito em batch cri
 
 <p align="center">
   <a href="https://github.com/ru-bem/W11bALF/releases/latest/download/W11bALF.cmd"><img src="https://img.shields.io/badge/Clique%20aqui%20para%20baixar%20a%20vers%C3%A3o%20mais%20recente-008000?style=for-the-badge"></a>
+  <a href="https://livepix.gg/rubem"><img src="https://img.shields.io/badge/Contribua%20com%20o%20projeto-DDDDDD?style=for-the-badge"></a>
 </p>
-  
----
 
+<br>
 <p align="center">
   <img height="500" alt="menu_1 6 2" src="https://github.com/user-attachments/assets/c94b4682-8f25-4ea4-8cdc-60a478aecff1" /> <img height="500" alt="extras_1 6 2" src="https://github.com/user-attachments/assets/701b318c-e602-4a3d-a5e2-ab48b8a7503a" />
 </p>
 
 ---
+<br>
 
 # ❔ O que o W11bALF pode fazer?
 **Atualmente, o W11bALF é capaz de automatizar os seguintes processos:**  
@@ -47,7 +48,7 @@ E mais! (Extras):
 • Ocultar ou exibir o "Início" e a "Galeria" do explorador de arquivos.  
 • Remover o Xbox App (Incluindo o popup persistente toda vez que um jogo é aberto)  
 
----
+<br>
 
 # 🔎 Configurações
 As configurações do programa estão armazenadas entre as linhas 7 e 67 do código, e podem ser personalizadas de acordo com o seu uso.
@@ -86,7 +87,7 @@ Ao fim do processo de desinstalação padrão de bloatware duas desinstalações
 - `delapp1=1` - Desinstalar o OneDrive
 - `delapp2=1` - Desinstalar o Xbox
 
----
+<br>
 
 # ℹ️ Mais informações
 - [Lista de serviços alterados](https://github.com/ru-bem/W11bALF/blob/main/Recursos/Mais_Informa%C3%A7%C3%B5es/Lista_de_servi%C3%A7os_alterados.md)
@@ -98,7 +99,7 @@ Ao fim do processo de desinstalação padrão de bloatware duas desinstalações
 - [Limpeza da pasta WinSxS](https://github.com/ru-bem/W11bALF/blob/main/Recursos/Mais_Informa%C3%A7%C3%B5es/Limpeza_da_pasta_WinSxS.md)
 - [Ativação do Windows 11](https://github.com/ru-bem/W11bALF/blob/main/Recursos/Mais_Informa%C3%A7%C3%B5es/Ativa%C3%A7%C3%A3o_do_W11.md)
 
----
+<br>
 
 # ⭕ Observações
 
@@ -112,7 +113,7 @@ Ao fim do processo de desinstalação padrão de bloatware duas desinstalações
 - Motivo 1 - Se você já usa o Edge há algum tempo e já tiver personalizado e alterado várias configurações, é possível que essa função configure o navegador de forma diferente da que você já costuma usar.
 - Motivo 2 - Se o Windows 11 já estiver instalado há algum tempo, você provavelmente já personalizou o menu iniciar e a barra de tarefas. Usar essa função vai desfixar todos os ícones tanto do menu iniciar quanto da barra de tarefas, o que apenas atrapalhará você nesse caso.
 
----
+<br>
 
 # ⏳ Futuro
 
@@ -121,19 +122,19 @@ Ao fim do processo de desinstalação padrão de bloatware duas desinstalações
   - A interface foi totalmente reestruturada
 - Cada função do W11bALF poderá ser usada separadamente com os arquivos de execução isolada.
 - A configuração automática do Microsoft Edge será melhorada.
-
----
+<br>
 
 <p align="center">
   <a href="https://github.com/ru-bem/W11bALF/releases/latest/download/W11bALF.cmd"><img src="https://img.shields.io/badge/Clique%20aqui%20para%20baixar%20a%20vers%C3%A3o%20mais%20recente-008000?style=for-the-badge"></a>
+  <a href="https://livepix.gg/rubem"><img src="https://img.shields.io/badge/Contribua%20com%20o%20projeto-DDDDDD?style=for-the-badge"></a>
 </p>
 
----
-Se puder, contribua com o projeto: [livepix.gg/rubem](https://livepix.gg/rubem)
+<br>
 
 Para relatar bugs, enviar sugestões ou fazer perguntas use a aba [issues](https://github.com/ru-bem/W11bALF/issues) na página principal. Por favor, use a label correspondente ao tipo de mensagem.
 
 Você também pode falar diretamente comigo atráves do [Discord](https://discord.com/users/196300526139342848) - eon.inf
 
 ---
+
 ###### W11bALF - Windows 11 but A Little Faster - Criado por Rubem - Obrigado pelo apoio!
