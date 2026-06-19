@@ -1,16 +1,23 @@
-# W11bALF
-
-O **Windows 11 but A Little Faster** é um pequeno programa escrito em batch criado com o objetivo de facilitar o processo de configuração pós-instalação do Windows 11 e várias outras funções auxiliares de maneira automatizada.
-
-**[⬇️ Faça o download da versão mais recente clicando aqui ⬇️](https://github.com/ru-bem/W11bALF/releases/latest/download/W11bALF.cmd)**
+<h3 align="center"><a href="https://github.com/ru-bem/W11bALF"><img src="https://raw.githubusercontent.com/ru-bem/W11bALF/refs/heads/main/Recursos/w11balf.png" width="340px"></a></h3>
+<p align="center">
+  <a href="https://github.com/ru-bem/W11bALF/releases/latest"><img src="https://img.shields.io/github/v/release/ru-bem/W11bALF?style=flat-square&colorB=008000&label=Vers%C3%A3o%20mais%20recente"></a>
+  <a href="https://github.com/ru-bem/W11bALF/releases"><img src="https://img.shields.io/github/downloads/ru-bem/W11bALF/total?style=flat-square&colorB=008000&label=Downloads"></a>
+  <a href="https://github.com/ru-bem/W11bALF"><img src="https://img.shields.io/github/stars/ru-bem/W11bALF?style=flat-square&color=008000"></a>
+</p>
 
 ---
 
-###### < Imagem do MENU PRINCIPAL <⠀⠀⠀ ⠀⠀⠀⠀⠀⠀ ⠀⠀⠀⠀⠀ |||||⠀⠀⠀ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀  > Imagem das OPÇÕES EXTRAS >
-<img height="500" alt="menu" src="https://github.com/user-attachments/assets/44c821b7-0d60-468d-b093-aa9c3b260fe9" /> <img height="500" alt="extras" src="https://github.com/user-attachments/assets/39fef0d2-fa71-4a5e-b3a2-051d58799281" />
+O **Windows 11 but A Little Faster** é um pequeno programa escrito em batch criado com o objetivo de facilitar o processo de configuração pós-instalação do Windows 11 e várias outras funções auxiliares de maneira automatizada.
 
+<p align="center">
+  <a href="https://github.com/ru-bem/W11bALF/releases/latest/download/W11bALF.cmd"><img src="https://img.shields.io/badge/Clique%20aqui%20para%20baixar%20a%20vers%C3%A3o%20mais%20recente-008000?style=for-the-badge"></a>
+</p>
+  
+---
 
-
+<p align="center">
+  <img height="500" alt="menu_1 6 2" src="https://github.com/user-attachments/assets/c94b4682-8f25-4ea4-8cdc-60a478aecff1" /> <img height="500" alt="extras_1 6 2" src="https://github.com/user-attachments/assets/701b318c-e602-4a3d-a5e2-ab48b8a7503a" />
+</p>
 
 ---
 
@@ -28,6 +35,7 @@ O **Windows 11 but A Little Faster** é um pequeno programa escrito em batch cri
 - **[Office]** Instalar automaticamente o [OnlyOffice](https://www.onlyoffice.com/) sem interação do usuário. [O365](https://www.office.com/) em breve!
 - **[LTSC]** Instalar a Microsoft Store nas versões LTSC do W11.
 - **[LTSC]** Instalar o Winget nas versões LTSC do W11.
+- **[LTSC]** Instalar os Widgets versões LTSC do W11.
 
 E mais! (Extras)
 - Instalar codecs oficiais da Microsoft.
@@ -35,10 +43,6 @@ E mais! (Extras)
 - Alternar facilmente entre o Menu de Contexto Clássico e o Moderno.
 - Ocultar ou exibir o "Início" e a "Galeria" do explorador de arquivos.
 - Remover o Xbox App (Incluindo o popup persistente toda vez que um jogo é aberto)
-
----
-
-**[⬇️ Faça o download da versão mais recente clicando aqui ⬇️](https://github.com/ru-bem/W11bALF/releases/latest/download/W11bALF.cmd)**
 
 ---
 
@@ -109,13 +113,17 @@ Ao fim do processo de desinstalação padrão de bloatware duas desinstalações
 
 # ⏳ Futuro
 
-- Cada função do W11bALF poderá ser usada separadamente com os arquivos de execução isolada. É como uma versão "Super ultra mega lite" de um programa que já é muito leve e rápido.
+- O W11bALF está sendo reescrito para a versão v2.0 nesse momento.
+  - Parte das atividades acontecem até 2x mais rápido por enquanto.
+  - A interface foi totalmente reestruturada
+- Cada função do W11bALF poderá ser usada separadamente com os arquivos de execução isolada.
 - A configuração automática do Microsoft Edge será melhorada.
-- A instalação do Office será automatizada.
 
 ---
 
-**[⬇️ Faça o download da versão mais recente clicando aqui ⬇️](https://github.com/ru-bem/W11bALF/releases/latest/download/W11bALF.cmd)**
+<p align="center">
+  <a href="https://github.com/ru-bem/W11bALF/releases/latest/download/W11bALF.cmd"><img src="https://img.shields.io/badge/Clique%20aqui%20para%20baixar%20a%20vers%C3%A3o%20mais%20recente-008000?style=for-the-badge"></a>
+</p>
 
 ---
 Se puder, contribua com o projeto: [livepix.gg/rubem](https://livepix.gg/rubem)
