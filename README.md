@@ -22,27 +22,30 @@ O **Windows 11 but A Little Faster** é um pequeno programa escrito em batch cri
 ---
 
 # ❔ O que o W11bALF pode fazer?
-**Atualmente, o W11bALF é capaz de automatizar os seguintes processos:**
+**Atualmente, o W11bALF é capaz de automatizar os seguintes processos:**  
+<br>
 
-- **[Serviços]** Alterar o modo de inicialização de alguns serviços do windows.
-- **[Telemetria]** Reduzir a coleta de dados de uso pela Microsoft.
-- **[Bloatwares]** Desinstalar dezenas de aplicativos pré-instalados.
-- **[Limpeza]** Fazer uma limpeza completa em toda partição onde o sistema está instalado.
-- **[WinSxS]** Limpar a pasta WinSxS, o que pode ajudar a liberar bastante espaço em disco.
-- **[Menu e Taskbar]** Desfixar todos os ícones do menu iniciar e da barra de tarefas.
-- **[Hibernação]** Ajustar a hibernação para HDDs, SSDs e NVMEs.
-- **[Ativação]** Ativar o Windows 11.
-- **[Office]** Instalar automaticamente o [OnlyOffice](https://www.onlyoffice.com/) sem interação do usuário. [O365](https://www.office.com/) em breve!
-- **[LTSC]** Instalar a Microsoft Store nas versões LTSC do W11.
-- **[LTSC]** Instalar o Winget nas versões LTSC do W11.
-- **[LTSC]** Instalar os Widgets versões LTSC do W11.
+• **[Serviços]** - Alterar o modo de inicialização de alguns serviços do windows.  
+• **[Telemetria]** - Reduzir a coleta de dados de uso pela Microsoft.  
+• **[Bloatwares]** - Desinstalar dezenas de aplicativos pré-instalados.  
+• **[Limpeza]** - Fazer uma limpeza completa em toda partição onde o sistema está instalado.  
+• **[WinSxS]** - Limpar a pasta WinSxS, o que pode ajudar a liberar bastante espaço em disco.  
+• **[Menu e Taskbar]** - Desfixar todos os ícones do menu iniciar e da barra de tarefas.  
+• **[Hibernação]** - Ajustar a hibernação para HDDs, SSDs e NVMEs.  
+• **[Ativação]** - Ativar o Windows 11.  
+• **[Office]** - Instalar automaticamente o [Office365](https://www.office.com/) e/ou o [OnlyOffice](https://www.onlyoffice.com/) sem interação do usuário.  
+• **[LTSC]** - Instalar a Microsoft Store nas versões LTSC do W11.  
+• **[LTSC]** - Instalar o Winget nas versões LTSC do W11.  
+• **[LTSC]** - Instalar os Widgets versões LTSC do W11.  
+<br>
 
-E mais! (Extras)
-- Instalar codecs oficiais da Microsoft.
-- Desativar ou ativar o Microsoft Copilot.
-- Alternar facilmente entre o Menu de Contexto Clássico e o Moderno.
-- Ocultar ou exibir o "Início" e a "Galeria" do explorador de arquivos.
-- Remover o Xbox App (Incluindo o popup persistente toda vez que um jogo é aberto)
+E mais! (Extras):  
+
+• Instalar codecs oficiais da Microsoft.  
+• Desativar ou ativar o Microsoft Copilot.  
+• Alternar facilmente entre o Menu de Contexto Clássico e o Moderno.  
+• Ocultar ou exibir o "Início" e a "Galeria" do explorador de arquivos.  
+• Remover o Xbox App (Incluindo o popup persistente toda vez que um jogo é aberto)  
 
 ---
 
