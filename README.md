@@ -123,12 +123,12 @@ Todo o programa está sendo reescrito do zero e o que funciona já executa de ma
 
 | Interno | Principais | Utilidades |
 | --- | --- | --- |
-| 🟩 Nova interface | ⬜ Modo ONE CLICK | ⬜ Instalar Winget  
-| 🟩 Estrutura interna | 🟩 Remover bloatware | ⬜ Gerenciar os Widgets  
-| ⬜ Verificações iniciais | 🟩 Serviços e Telemetria | ⬜ Gerencias a MS Store  
-| | ⬜ Configurações essenciais | ⬜ Botão de "emergência" |
-| | ⬜ Ajuste de hibernação | ⬜ Gerenciar "Início e "Galeria" |
-| | 🟩 Limpeza do Sistema | ⬜ Configuração do MSEdge |
+| 🟩 Nova interface | ⬜ Modo ONE CLICK | ⬜ Instalar Winget |
+| 🟩 Estrutura interna | 🟩 Remover bloatware | ⬜ Gerenciar os Widgets |
+| 🟩 Permissões de admin | 🟩 Serviços e Telemetria | ⬜ Gerencias a MS Store |
+| 🟩 Procurar por updates | ⬜ Configurações essenciais | ⬜ Botão de "emergência" |
+| 🟩 Integridade do PowerShell | ⬜ Ajuste de hibernação | ⬜ Gerenciar "Início e "Galeria" |
+| 🟩 Verificar PRO ou LTSC | 🟩 Limpeza do Sistema | ⬜ Configuração do MSEdge |
 | | ⬜ Limpeza WinSxS | ⬜ Arquivos .bat separados |
 | | ⬜ Ativação do Windows | |
 | | ⬜ Pacote Office | |
