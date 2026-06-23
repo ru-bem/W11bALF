@@ -15,8 +15,9 @@
 </p>
 
 <p align="center">
-  <img height="500" alt="menu_1 6 2" src="https://github.com/user-attachments/assets/c94b4682-8f25-4ea4-8cdc-60a478aecff1" /> <img height="500" alt="extras_1 6 2" src="https://github.com/user-attachments/assets/701b318c-e602-4a3d-a5e2-ab48b8a7503a" />
+  <img height="500" alt="1 6" src="https://github.com/user-attachments/assets/b5058a6c-a1f7-4686-bf6e-383b24c2d3c2" />
 </p>
+
 
 ---
 
@@ -115,14 +116,22 @@ Ao fim do processo de desinstalação padrão de bloatware duas desinstalações
 
 <br>
 
-# ⏳ Futuro
+# ⏳ Roadmap do W11bALF v2.0.0
+Todo o programa está sendo reescrito do zero e o que funciona já executa de maneira MUITO mais rápida.  
+  
+🟩 = Pronto  |  ⬜ = Em progresso
 
-- O W11bALF está sendo reescrito para a versão v2.0 nesse momento.
-  - Parte das atividades acontecem até 2x mais rápido por enquanto.
-  - A interface foi totalmente reestruturada
-- Cada função do W11bALF poderá ser usada separadamente com os arquivos de execução isolada.
-- A configuração automática do Microsoft Edge será melhorada.
-<br>
+| Interno | Principais | Utilidades |
+| --- | --- | --- |
+| 🟩 Nova interface | ⬜ Modo ONE CLICK | ⬜ Instalar Winget  
+| 🟩 Estrutura interna | 🟩 Remover bloatware | ⬜ Gerenciar os Widgets  
+| ⬜ Verificações iniciais | 🟩 Serviços e Telemetria | ⬜ Gerencias a MS Store  
+| | ⬜ Configurações essenciais | ⬜ Botão de "emergência" |
+| | ⬜ Ajuste de hibernação | ⬜ Gerenciar "Início e "Galeria" |
+| | 🟩 Limpeza do Sistema | ⬜ Configuração do MSEdge |
+| | ⬜ Limpeza WinSxS | ⬜ Arquivos .bat separados |
+| | ⬜ Ativação do Windows | |
+| | ⬜ Pacote Office | |
 
 ---
 
