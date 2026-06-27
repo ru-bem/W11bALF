@@ -125,7 +125,7 @@ Todo o programa está sendo reescrito do zero e o que funciona já executa de ma
 | --- | --- | --- |
 | 🟩 Nova interface | ⬜ Modo ONE CLICK | ⬜ Instalar Winget |
 | 🟩 Estrutura interna | 🟩 Remover bloatware | ⬜ Gerenciar os Widgets |
-| 🟩 Permissões de admin | 🟩 Serviços e Telemetria | ⬜ Gerencias a MS Store |
+| 🟩 Permissões de admin | 🟩 Serviços e Telemetria | ⬜ Gerenciar MS Store |
 | 🟩 Procurar por updates | ⬜ Configurações essenciais | ⬜ Botão de "emergência" |
 | 🟩 Integridade do PowerShell | ⬜ Ajuste de hibernação | ⬜ Gerenciar "Início e "Galeria" |
 | 🟩 Verificar PRO ou LTSC | 🟩 Limpeza do Sistema | ⬜ Configuração do MSEdge |
