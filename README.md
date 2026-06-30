@@ -52,74 +52,83 @@ E mais! (Extras):
 <br>
 
 # 🔎 Configurações
-As configurações do programa estão armazenadas entre as linhas 7 e 67 do código, e podem ser personalizadas de acordo com o seu uso.
+> [!TIP]
+> As configurações do W11bALF se encontram entre as linhas 7 e 67 do código, e podem ser personalizadas de acordo com o seu uso.
 
-### - bALFmode (Modo automático)
-O **Modo bALF** é o modo automático do script. Ele pode ser ativado editando a **linha 19** do código, alterando o valor de `balfmode` entre 0, 1 e 2.
-- `balfmode=0` - Valor padrão. O programa iniciará normalmente.
-- `balfmode=1` - O programa executará automaticamente as **atividades recomendadas**:
-Serviços e telemetria | Desinstalação de bloatware | Configuração do Windows | Limpeza do sistema | Configuração de hibernação
-- `balfmode=2` - O programa executará **TODAS as atividades** automaticamente.
+### bALFmode (Modo automático)
+O modo automático pode ser ativado editando a **linha 19** do código, alterando o valor de `balfmode`.  
+• `balfmode=0` - Valor padrão. O programa iniciará normalmente.  
+• `balfmode=1` - O programa executará automaticamente as **atividades recomendadas**:  
+Serviços e telemetria + Desinstalação de bloatware + Configuração do Windows + Limpeza do sistema + Configuração de hibernação.  
+• `balfmode=2` - O programa executará **TODAS as atividades** automaticamente.
 
-### - bALFtime
-Antes de iniciar a execução o programa aguardará, por padrão, 5 segundos onde exibirá para você um resumo das atividades que serão realizadas. Para alterar o tempo de espera altere o valor de `balftime` na linha 25 do código.
-Funcionará **apenas** em conjunto com o modo bALF.
+<br>
 
-### - Silent (Modo silencioso)
-Pode ser ativado ou desativado alterando o valor de `silent` na linha 32 do código.
-- `silent=0` - Valor padrão. Executará as tarefas normalmente.
-- `silent=1` - Executará todos os processos automáticos exibindo apenas o nome da tarefa que está sendo realizada no momento, sem nenhum detalhe adicional.
-Funcionará apenas em conjunto com o modo bALF.
+### bALFtime
+Por padrão, antes de iniciar a execução automática o programa aguardará 5 segundos, onde será visível um resumo das atividades que serão realizadas.  
+Para alterar o tempo de espera altere o valor de `balftime` na linha 25 do código.
+> Funcionará apenas em conjunto com o modo bALF.
 
-### - Limpeza+
-A limpeza plus pode ser ativada alterando o valor de `limpeza_plus` na linha 38 do código.
-- `limpeza_plus=0` - Valor padrão.
-- `limpeza_plus=1` - Serão adicionados alguns arquivos e pastas extras para a limpeza.
+<br>
 
-### - Telas de informação
-A exibição ou não das telas de informação pode ser definida alterando o valor de `info` na linha 54 do código.
-- `info=1` - Valor padrão. Exibe informações sobre cada uma das atividades antes de executá-las.
-- `info=2` - Inicia diretamente as atividades ao serem escolhidas.
+### Silent (Modo silencioso)
+Pode ser ativado ou desativado alterando o valor de `silent` na linha 32 do código.  
+• `silent=0` - Valor padrão. Executará as tarefas normalmente.  
+• `silent=1` - Executará todos os processos automáticos exibindo apenas o nome da tarefa que está sendo realizada no momento, sem nenhum detalhe adicional.  
+> Funcionará apenas em conjunto com o modo bALF.
 
-### - Desinstalação de Bloatware
-Ao fim do processo de desinstalação padrão de bloatware duas desinstalações opcionais serão iniciadas. Você pode escolher se deseja remover esses aplicativos ou não. (A partir da linha 63).
-- 0 = Não desinstalar
-- 1 = Desinstalar
-- `delapp1=1` - Desinstalar o OneDrive
-- `delapp2=1` - Desinstalar o Xbox
+<br>
+
+### Limpeza+
+A limpeza plus pode ser ativada alterando o valor de `limpeza_plus` na linha 38 do código.  
+• `limpeza_plus=0` - Valor padrão.  
+• `limpeza_plus=1` - Serão adicionados alguns arquivos e pastas extras para a limpeza.
+
+<br>
+
+### Telas de informação
+A exibição ou não das telas de informação pode ser definida alterando o valor de `info` na linha 54 do código.  
+• `info=1` - Valor padrão. Exibe informações sobre cada uma das atividades antes de executá-las.  
+• `info=2` - Inicia diretamente as atividades quando selecionadas.
+
+<br>
+
+### Desinstalação de Bloatware
+Duas desinstalações opcionais podem ser iniciadas ao fim do processo. Você pode escolher se deseja remover esses aplicativos ou não à partir da linha 63.  
+`0` = Não desinstalar - `1` = Desinstalar  
+• `delapp1=1` - Desinstalar o OneDrive  
+• `delapp2=1` - Desinstalar o Xbox
 
 <br>
 
 # ℹ️ Mais informações
-- [Lista de serviços alterados](https://github.com/ru-bem/W11bALF/blob/main/Recursos/Mais_Informa%C3%A7%C3%B5es/Lista_de_servi%C3%A7os_alterados.md)
-- [Lista de tarefas de telemetria alteradas](https://github.com/ru-bem/W11bALF/blob/main/Recursos/Mais_Informa%C3%A7%C3%B5es/Lista_de_tarefas_de_telemetria_alteradas.md)
-- [Lista de programas desinstalados](https://github.com/ru-bem/W11bALF/blob/main/Recursos/Mais_Informa%C3%A7%C3%B5es/Lista_de_programas_desinstalados.md)
-- [Sobre a alteração de configurações](https://github.com/ru-bem/W11bALF/blob/main/Recursos/Mais_Informa%C3%A7%C3%B5es/Sobre_a_altera%C3%A7%C3%A3o_de_configura%C3%A7%C3%B5es.md)
-- [Lista de limpeza](https://github.com/ru-bem/W11bALF/blob/main/Recursos/Mais_Informa%C3%A7%C3%B5es/Lista_de_limpeza.md)
-- [Configurações de hibernação](https://github.com/ru-bem/W11bALF/blob/main/Recursos/Mais_Informa%C3%A7%C3%B5es/Configura%C3%A7%C3%A3o_de_hiberna%C3%A7%C3%A3o.md)
-- [Limpeza da pasta WinSxS](https://github.com/ru-bem/W11bALF/blob/main/Recursos/Mais_Informa%C3%A7%C3%B5es/Limpeza_da_pasta_WinSxS.md)
-- [Ativação do Windows 11](https://github.com/ru-bem/W11bALF/blob/main/Recursos/Mais_Informa%C3%A7%C3%B5es/Ativa%C3%A7%C3%A3o_do_W11.md)
+• [Lista de serviços alterados](https://github.com/ru-bem/W11bALF/blob/main/Recursos/Mais_Informa%C3%A7%C3%B5es/Lista_de_servi%C3%A7os_alterados.md)  
+• [Lista de tarefas de telemetria alteradas](https://github.com/ru-bem/W11bALF/blob/main/Recursos/Mais_Informa%C3%A7%C3%B5es/Lista_de_tarefas_de_telemetria_alteradas.md)  
+• [Lista de programas desinstalados](https://github.com/ru-bem/W11bALF/blob/main/Recursos/Mais_Informa%C3%A7%C3%B5es/Lista_de_programas_desinstalados.md)  
+• [Sobre a alteração de configurações](https://github.com/ru-bem/W11bALF/blob/main/Recursos/Mais_Informa%C3%A7%C3%B5es/Sobre_a_altera%C3%A7%C3%A3o_de_configura%C3%A7%C3%B5es.md)  
+• [Lista de limpeza](https://github.com/ru-bem/W11bALF/blob/main/Recursos/Mais_Informa%C3%A7%C3%B5es/Lista_de_limpeza.md)  
+• [Configurações de hibernação](https://github.com/ru-bem/W11bALF/blob/main/Recursos/Mais_Informa%C3%A7%C3%B5es/Configura%C3%A7%C3%A3o_de_hiberna%C3%A7%C3%A3o.md)  
+• [Limpeza da pasta WinSxS](https://github.com/ru-bem/W11bALF/blob/main/Recursos/Mais_Informa%C3%A7%C3%B5es/Limpeza_da_pasta_WinSxS.md)  
+• [Ativação do Windows 11](https://github.com/ru-bem/W11bALF/blob/main/Recursos/Mais_Informa%C3%A7%C3%B5es/Ativa%C3%A7%C3%A3o_do_W11.md)  
+• [Instalação do Pacote Office](https://github.com/ru-bem/W11bALF/blob/main/Office/readme.md)
 
 <br>
 
-# ⭕ Observações
+# ⚠️ Observações
+***Todos os processos são feitos de maneira não-destrutiva, ou seja, nenhuma das funções, da forma como estão programadas, são capazes de causar danos ao sistema como observado em outros scripts.***
 
-• Tudo é feito de maneira não-destrutiva, ou seja, nenhuma das funções faz nada de maneira que possa causar danos ao sistema como alguns outros scripts.
+***Cada uma das funções do W11bALF foi exaustivamente testada em todas as suas combinações possíveis para garantir que tudo funcione perfeitamente.***
 
-• Cada uma das funções foi exaustivamente testada em todas as suas combinações possíveis para garantir que tudo funcione perfeitamente.
+***Todas as funções, alterações e automações feitas foram pensadas para o público geral e não para um nicho específico de usuários, por tanto, NENHUM recurso do windows deixará de funcionar após o uso do programa, além disso, não espere por modificações agressivas no sistema.***
 
-• Todas as alterações feitas foram pensadas para o público geral e não para um nicho específico de usuários, por tanto, NENHUM recurso do windows deixará de funcionar após o uso do programa, além disso, não espere por modificações agressivas no sistema.
-
-• Alguns recursos são recomendados apenas para novas instalações do Windows ou para ocasiões específicas, são eles a configuração do Microsoft Edge e a desfixação dos ícones do menu iniciar e da barra de tarefas.
-- Motivo 1 - Se você já usa o Edge há algum tempo e já tiver personalizado e alterado várias configurações, é possível que essa função configure o navegador de forma diferente da que você já costuma usar.
-- Motivo 2 - Se o Windows 11 já estiver instalado há algum tempo, você provavelmente já personalizou o menu iniciar e a barra de tarefas. Usar essa função vai desfixar todos os ícones tanto do menu iniciar quanto da barra de tarefas, o que apenas atrapalhará você nesse caso.
+***Se você é um usuário avançado(a), então você já sabe o que fazer após a utilização do W11bALF ;)***
 
 <br>
 
 # ⏳ Roadmap do W11bALF v2.0.0
 Todo o programa está sendo reescrito do zero e o que funciona já executa de maneira MUITO mais rápida.  
   
-🟩 = Pronto  |  ⬜ = Em progresso
+> 🟩 = Pronto  |  ⬜ = Em progresso
 
 | Interno | Principais | Utilidades |
 | --- | --- | --- |
